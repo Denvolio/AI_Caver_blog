@@ -8,7 +8,6 @@
   <meta name="description" content="{{ with .Params.description }}{{.}}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="/assets/style.css">
   {{ if .IsHome }}
-    <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }}">
   {{ end }}
 </head>
 <body>

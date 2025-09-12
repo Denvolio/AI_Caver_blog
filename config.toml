@@ -1,6 +1,6 @@
-
 baseURL = "/"
 title = "AI Caver"
+theme = "LoveIt"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 
@@ -17,3 +17,4 @@ enableRobotsTXT = true
 [params]
   author = "Denys Voroshylov"
   description = "Minimal bilingual blog (EN/UK)"
+

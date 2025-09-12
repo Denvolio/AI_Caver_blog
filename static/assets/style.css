@@ -1,0 +1,20 @@
+
+:root{--max:720px;--fg:#111;--bg:#fff;--muted:#666;--link:#0a56d6;--border:#e5e7eb}
+@media (prefers-color-scheme: dark){:root{--fg:#eee;--bg:#0b0c0f;--muted:#9aa0a6;--link:#7aa2ff;--border:#222}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border);padding:12px 0}
+.brand a{font-weight:700;font-size:18px}
+.nav{display:flex;gap:12px;flex-wrap:wrap}
+.lang{font-size:14px;color:var(--muted)} .lang a{margin-left:8px}
+.post-card{padding:12px 0;border-bottom:1px solid var(--border)}
+.post-card h2{margin:0 0 6px;font-size:20px}
+.post-meta{font-size:13px;color:var(--muted)}
+main img{max-width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
+footer{margin-top:32px;padding:24px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+code,pre{background:#0f172a0d;border:1px solid var(--border);border-radius:8px;padding:.2em .4em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.btn{display:inline-block;padding:.5em .9em;border:1px solid var(--border);border-radius:999px}
+.badge{display:inline-block;font-size:12px;padding:.15em .5em;border:1px solid var(--border);border-radius:6px;color:var(--muted)}
+@media (min-width:800px){.header{padding:18px 0}.post-card h2{font-size:22px}}

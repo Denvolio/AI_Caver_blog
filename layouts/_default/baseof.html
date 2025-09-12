@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{.}}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="stylesheet" href="/assets/style.css">
+  {{ if .IsHome }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .RSSLink }}" title="{{ .Site.Title }}">
+  {{ end }}
+</head>
+<body>
+<div class="wrap">
+<header class="header">
+  <div class="brand"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></div>
+  <nav class="nav">
+    <a class="btn" href="{{ .Site.Home.RelPermalink }}">Home</a>
+    <a class="btn" href="{{ "posts" | relLangURL }}">Archive</a>
+    <a class="btn" href="{{ "about" | relLangURL }}">About</a>
+    <a class="btn" href="/admin/">Admin</a>
+  </nav>
+</header>
+<div class="lang">
+  {{- $other := cond (eq .Site.Language.Lang "en") "uk" "en" -}}
+  <span>{{ .Site.Language.LanguageName }}</span> · <a href="{{ (site.GetPage $other "/").RelPermalink }}">{{ (index site.Languages $other).LanguageName }}</a>
+</div>
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+<footer>
+  <div>© {{ now.Format "2006" }} {{ .Site.Params.author }} · <a href="{{ .Site.Home.RelPermalink }}index.xml">RSS</a> · <span class="badge">Static</span></div>
+</footer>
+</div>
+</body>
+</html>

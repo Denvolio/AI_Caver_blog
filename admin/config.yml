@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow
+
+i18n:
+  structure: multiple_folders
+  locales: [en, uk]
+  default_locale: en
+
+collections:
+  - name: "posts_en"
+    label: "Posts (EN)"
+    folder: "content/en/posts"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    i18n: false
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "posts_uk"
+    label: "Пости (UK)"
+    folder: "content/uk/posts"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    extension: "md"
+    format: "frontmatter"
+    i18n: false
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime"}
+      - {label: "Опис", name: "excerpt", widget: "text", required: false}
+      - {label: "Текст", name: "body", widget: "markdown"}
+
+  - name: "pages_en"
+    label: "Pages (EN)"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/en/_index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+      - label: "About"
+        name: "about"
+        file: "content/en/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages_uk"
+    label: "Сторінки (UK)"
+    files:
+      - label: "Головна"
+        name: "home_uk"
+        file: "content/uk/_index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+      - label: "Про сайт"
+        name: "about_uk"
+        file: "content/uk/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

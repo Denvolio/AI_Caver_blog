@@ -1,0 +1,19 @@
+
+baseURL = "/"
+title = "AI Caver"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content/en"
+  [languages.uk]
+    languageName = "Українська"
+    weight = 2
+    contentDir = "content/uk"
+
+[params]
+  author = "Denys Voroshylov"
+  description = "Minimal bilingual blog (EN/UK)"

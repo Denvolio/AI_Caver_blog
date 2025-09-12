@@ -23,8 +23,7 @@
   </nav>
 </header>
 <div class="lang">
-  {{- $other := cond (eq .Site.Language.Lang "en") "uk" "en" -}}
-  <span>{{ .Site.Language.LanguageName }}</span> · <a href="{{ (site.GetPage $other "/").RelPermalink }}">{{ (index site.Languages $other).LanguageName }}</a>
+  <a href="/en/">English</a> · <a href="/uk/">Українська</a>
 </div>
 <main>
   {{ block "main" . }}{{ end }}

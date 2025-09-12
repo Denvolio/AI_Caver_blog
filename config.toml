@@ -3,6 +3,7 @@ title = "AI Caver"
 theme = "LoveIt"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
+paginate = 10
 
 [languages]
   [languages.en]
@@ -16,10 +17,26 @@ enableRobotsTXT = true
 
 [params]
   description = "Minimal bilingual blog (EN/UK)"
+  defaultTheme = "auto"  # авто светлая/тёмная
 
   [params.author]
     name  = "Denys Voroshylov"
-    email = "author@aicaver.com"    # можешь поставить свой
-    link  = "https://aicaver.com"  # или любой твой линк
+    email = "author@aicaver.com"
+    link  = "https://aicaver.com"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
 
 

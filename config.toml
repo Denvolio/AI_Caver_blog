@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://aicaver.com/"
 title = "AI Caver"
 theme = "LoveIt"
 defaultContentLanguage = "en"
@@ -15,6 +15,11 @@ enableRobotsTXT = true
     contentDir = "content/uk"
 
 [params]
-  author = "Denys Voroshylov"
   description = "Minimal bilingual blog (EN/UK)"
+
+  [params.author]
+    name  = "Denys Voroshylov"
+    email = "author@aicaver.com"    # можешь поставить свой
+    link  = "https://aicaver.com"  # или любой твой линк
+
 

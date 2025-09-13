@@ -5,43 +5,79 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AI Caver CMS</title>
 
-  <!-- Netlify Identity (логин) -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Netlify Identity -->
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <!-- Decap CMS (через jsDelivr, фиксируем версию) -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.13/dist/decap-cms.js"></script>
+  <!-- Decap CMS: пробуем unpkg; если вдруг не загрузится — подменим на jsDelivr -->
+  <script id="decap-cms-cdn" defer src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-  <!-- Жёстко включаем ручную инициализацию CMS -->
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
+  <style>
+    body{font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0}
+    #log{padding:16px;color:#666}
+  </style>
 </head>
 <body>
-  <p style="padding:16px;font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial">CMS loader…</p>
+  <div id="log">CMS loader…</div>
   <div id="nc-root"></div>
 
   <script>
-    // Инициализация Netlify Identity (редирект обратно на /admin после логина)
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', (user) => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
+    // Помощник: логируем шаги прямо в DOM (видно, где стопорится)
+    function log(s){ try{ document.getElementById('log').innerText = s; }catch(e){} }
 
-    // Явный старт Decap CMS и явный путь к конфигу
-    document.addEventListener('DOMContentLoaded', function () {
-      if (window.CMS && typeof window.CMS.init === 'function') {
-        CMS.init({ config: { load_config_file: true, path: '/admin/config.yml' } });
+    // после полной загрузки страницы
+    window.addEventListener('load', function () {
+      log('Page loaded, checking CMS…');
+
+      // Identity: редирект на /admin после логина
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+          }
+        });
+      }
+
+      // Если CMS не подгрузился с unpkg — переключимся на jsDelivr и перезапустимся
+      function fallbackToJsDelivr(){
+        var current = document.getElementById('decap-cms-cdn');
+        if (current && !current.dataset.fallbackDone){
+          current.dataset.fallbackDone = '1';
+          current.remove();
+          var s = document.createElement('script');
+          s.defer = true;
+          s.src = 'https://cdn.jsdelivr.net/npm/decap-cms@3.0.13/dist/decap-cms.js';
+          s.onload = tryInit;
+          s.onerror = function(){ log('Failed to load Decap from jsDelivr'); };
+          document.head.appendChild(s);
+          log('Switching to jsDelivr…');
+        }
+      }
+
+      function tryInit(){
+        if (window.CMS && typeof window.CMS.init === 'function') {
+          log('CMS loaded, initializing…');
+          CMS.init({ config: { load_config_file: true, path: '/admin/config.yml' } });
+          log('CMS initialized');
+        } else {
+          log('Decap not available yet, trying fallback…');
+          fallbackToJsDelivr();
+        }
+      }
+
+      // Попробуем инициализироваться через 100–300 мс после загрузки скрипта
+      var primary = document.getElementById('decap-cms-cdn');
+      if (primary){
+        primary.addEventListener('load', tryInit);
+        primary.addEventListener('error', function(){ log('Failed to load Decap from unpkg'); fallbackToJsDelivr(); });
+        // страховка, если событие load не отработало
+        setTimeout(tryInit, 400);
       } else {
-        console.error('Decap CMS not loaded');
+        fallbackToJsDelivr();
       }
     });
   </script>
 </body>
 </html>
+
 
 

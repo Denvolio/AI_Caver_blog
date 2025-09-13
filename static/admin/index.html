@@ -4,31 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Caver CMS</title>
+    <style>
+      body { font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; }
+      #log { padding: 12px; color: #555; }
+      #nc-root { min-height: 80vh; }
+    </style>
   </head>
   <body>
-    <div>Loading Decap…</div>
+    <div id="log">Loading Decap…</div>
+    <div id="nc-root"></div>
 
-    <!-- Netlify Identity -->
+    <!-- Netlify Identity (для логина) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@2.15.3/dist/decap-cms.js"></script>
+    <!-- Основной CDN (unpkg) -->
+    <script id="decap-cms-cdn" src="https://unpkg.com/decap-cms@2.15.3/dist/decap-cms.js"></script>
 
     <script>
-      console.log('Page loaded, CMS =', window.CMS);
-      window.addEventListener('load', () => {
-        if (window.CMS) {
-          console.log('CMS found, initializing');
-          CMS.init({
-            config: { load_config_file: true, path: '/admin/config.yml' }
-          });
-        } else {
-          console.error('CMS not loaded!');
+      function log(s){ try{ document.getElementById('log').textContent = s; }catch(e){} }
+
+      // Если unpkg не загрузится — переключимся на jsDelivr
+      function fallbackToJsDelivr(){
+        var current = document.getElementById('decap-cms-cdn');
+        if (current && !current.dataset.fallbackDone){
+          current.dataset.fallbackDone = '1';
+          current.remove();
+          var s = document.createElement('script');
+          s.id = 'decap-cms-cdn';
+          s.src = 'https://cdn.jsdelivr.net/npm/decap-cms@2.15.3/dist/decap-cms.js';
+          s.onload = tryInit;
+          s.onerror = function(){ log('Failed to load Decap from jsDelivr'); };
+          document.head.appendChild(s);
+          log('Switching to jsDelivr…');
         }
+      }
+
+      function tryInit(){
+        if (window.CMS && typeof window.CMS.init === 'function') {
+          log('CMS loaded, initializing…');
+          // Важно: указываем явный путь к YAML
+          CMS.init({ config: { load_config_file: true, path: '/admin/config.yml' } });
+          log('CMS initialized');
+        } else {
+          log('Decap not available yet → trying fallback…');
+          fallbackToJsDelivr();
+        }
+      }
+
+      // Подстрахуемся: попробуем инициализацию после загрузки страницы,
+      // после onload скрипта и просто таймером
+      window.addEventListener('load', function(){
+        log('Page loaded, waiting for Decap…');
+        setTimeout(tryInit, 300);
+      });
+
+      var cdn = document.getElementById('decap-cms-cdn');
+      cdn.addEventListener('load', tryInit);
+      cdn.addEventListener('error', function(){
+        log('Failed to load Decap from unpkg');
+        fallbackToJsDelivr();
       });
     </script>
   </body>
 </html>
+
 
 
 

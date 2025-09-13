@@ -7,7 +7,7 @@
     "root": "content"
   },
   "code": {
-    "root": "themes/LoveIt"
+    "root": "themes"
   },
   "themeConfig": [
     "config.toml"

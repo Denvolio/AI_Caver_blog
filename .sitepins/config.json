@@ -1,0 +1,17 @@
+{
+  "media": {
+    "root": "static/uploads",
+    "public": "uploads"
+  },
+  "content": {
+    "root": "content"
+  },
+  "code": {
+    "root": "themes/LoveIt"
+  },
+  "themeConfig": [
+    "config.toml"
+  ],
+  "arrangement": [],
+  "showCommitModal": false
+}

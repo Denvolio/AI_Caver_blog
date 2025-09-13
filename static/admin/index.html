@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AI Caver CMS</title>
 
-  <!-- Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
   <!-- Netlify Identity (логин) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Decap CMS (через jsDelivr, фиксируем версию) -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.13/dist/decap-cms.js"></script>
+
+  <!-- Жёстко включаем ручную инициализацию CMS -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
 </head>
 <body>
-  <!-- ВАЖНО: корневой элемент для CMS -->
+  <p style="padding:16px;font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial">CMS loader…</p>
   <div id="nc-root"></div>
 
-  <!-- Инициализация Identity (можно оставить инлайн) -->
   <script>
+    // Инициализация Netlify Identity (редирект обратно на /admin после логина)
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', (user) => {
         if (!user) {
@@ -26,7 +31,17 @@
         }
       });
     }
+
+    // Явный старт Decap CMS и явный путь к конфигу
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.CMS && typeof window.CMS.init === 'function') {
+        CMS.init({ config: { load_config_file: true, path: '/admin/config.yml' } });
+      } else {
+        console.error('Decap CMS not loaded');
+      }
+    });
   </script>
 </body>
 </html>
+
 

@@ -1,0 +1,36 @@
+{
+  "file": "content/en/posts/hello-world.md",
+  "name": "posts",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "date",
+      "label": "Date",
+      "type": "Date",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "excerpt",
+      "label": "Excerpt",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "featuredImage",
+      "label": "FeaturedImage",
+      "type": "media",
+      "value": "",
+      "defaultValue": ""
+    }
+  ]
+}

@@ -1,22 +1,37 @@
+baseURL = "https://aicaver.com/"
 title = "AICaver"
+theme = "LoveIt"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+paginate = 10
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content/en"
+  [languages.uk]
+    languageName = "Українська"
+    weight = 2
+    contentDir = "content/uk"
 
 [params]
   description = "Minimal bilingual blog (EN/UK)"
-  defaultTheme = "auto"
+  defaultTheme = "auto"  # авто светлая/тёмная
 
   [params.author]
     name  = "Denys Voroshylov"
     email = "author@aicaver.com"
     link  = "https://aicaver.com"
 
-  # Главная: аватар и слоган
+  # Главная: профиль (аватар + слоган под ним)
   [params.home]
     [params.home.profile]
       enable    = true
       avatarURL = "/uploads/ai-caver-avatar.png"
-      subtitle  = "Real-world AI, automation & resilient systems."
+      subtitle  = "Чем глубже мы спускаемся в недра ИИ, тем гуще тьма и круче уклон."
 
-  # Шапка LoveIt: мини-лого и текст рядом
+  # Шапка LoveIt: мини-лого слева + текст бренда
   [params.header]
     [params.header.title]
       logo   = "/uploads/ai-caver-mini.svg"
@@ -24,6 +39,22 @@ title = "AICaver"
       pre    = ""
       post   = ""
       typeit = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# Гарантируем HTML на главной (и оставляем RSS по /index.xml)
 [outputs]
 home    = ["HTML", "RSS"]
 section = ["HTML", "RSS"]

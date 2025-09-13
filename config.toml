@@ -18,31 +18,32 @@ paginate = 10
 [params]
   description = "Minimal bilingual blog (EN/UK)"
   defaultTheme = "auto"  # авто светлая/тёмная
-
   [params.author]
     name  = "Denys Voroshylov"
     email = "author@aicaver.com"
     link  = "https://aicaver.com"
 
-  # Главная: профиль (аватар + слоган под ним)
+# --- Главная: аватар + слоган (ПО ЯЗЫКАМ) ---
 [languages.en.params.home.profile]
-subtitle = "The deeper into AI we go, the darker it gets — and the steeper the slope."
+enable    = true
+avatarURL = "/uploads/ai-caver-avatar.png"
+subtitle  = "The deeper into AI we go, the darker it gets — and the steeper the slope."
 
 [languages.uk.params.home.profile]
-subtitle = "Що глибше ми занурюємося в надра ШІ, то темніша темрява й крутіший схил."
+enable    = true
+avatarURL = "/uploads/ai-caver-avatar.png"
+subtitle  = "Що глибше ми занурюємося в надра ШІ, то темніша темрява й крутіший схил."
 
+# --- Шапка LoveIt: мини-лого + бренд (глобально для обоих языков) ---
+[params.header]
+  [params.header.title]
+    logo   = "/uploads/ai-caver-mini.svg"
+    name   = "AICaver"
+    pre    = ""
+    post   = ""
+    typeit = false
 
-  # Шапка LoveIt: мини-лого слева + текст бренда
-  [params.header]
-    [params.header.title]
-      logo   = "/uploads/ai-caver-mini.svg"
-      name   = "AICaver"
-      pre    = ""
-      post   = ""
-      typeit = false
-
-[menu]
-# Меню EN
+# --- Меню (локализовано) ---
 [languages.en.menu]
   [[languages.en.menu.main]]
     name = "Home"
@@ -57,7 +58,6 @@ subtitle = "Що глибше ми занурюємося в надра ШІ, т
     url = "/about/"
     weight = 3
 
-# Меню UK
 [languages.uk.menu]
   [[languages.uk.menu.main]]
     name = "Головна"
@@ -72,8 +72,7 @@ subtitle = "Що глибше ми занурюємося в надра ШІ, т
     url = "/uk/about/"
     weight = 3
 
-
-# Гарантируем HTML на главной (и оставляем RSS по /index.xml)
+# --- Гарантируем HTML на главной (RSS остаётся по /index.xml) ---
 [outputs]
 home    = ["HTML", "RSS"]
 section = ["HTML", "RSS"]

@@ -1,8 +1,7 @@
 ---
-title: Doctor? Optional. How AI Is Disrupting Healthcare Before Regulations Catch Up
-date: ''
-excerpt: ''
-featuredImage: ''
+title: "Doctor? Optional. How AI Is Disrupting Healthcare..."
+date: 2025-09-13
+featuredImage: "/uploads/ai-doctor.png"
 ---
 Doctor? Optional. How AI Is Disrupting Healthcare Before Regulations Catch Up
 
@@ -35,7 +34,7 @@ This isn’t just a Polish issue. A friend in Germany got an allergist appointme
 AI isn’t a rebellion. It’s an alternative. Not perfect, but fast, accessible, and increasingly intelligent. And as The Rise of AI-Driven Self-Medication (2023–2025) report shows, I’m far from alone.
 
 > “Users are actively turning to ChatGPT, Claude, Gemini and other LLMs as a first line of consultation, especially in chronic, poorly diagnosed, or emotionally charged cases.” ([source](https://analyticsindiamag.com/global-tech/say-hi-to-doctor-chatgpt/))
-
+![AI doctor booth](/uploads/ai-booth.png)
 ***
 
 ### What AI-Driven Self-Medication Looks Like
@@ -63,7 +62,7 @@ In many cases, it’s not a choice — it’s a reaction to disappointment. Dela
 AI is stepping into the role of unlicensed therapist. In Japan, adolescent cancer patients used GPT-powered chatbots for emotional support. 80% disclosed things to the chatbot that they hadn’t told their families or doctors ([source](https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1543543/full)).
 
 ***
-
+![ChatGPT coffee session](/uploads/chatgpt-coffee.png)
 ### When AI Gets It Dangerously Wrong
 
 AI isn’t magic. It makes mistakes. And sometimes, they’re serious.

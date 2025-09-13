@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts_en"
+    label: "Posts (EN)"
+    folder: "content/en/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
+      - { label: "Featured image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts_uk"
+    label: "Пости (UK)"
+    folder: "content/uk/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Короткий опис", name: "excerpt", widget: "string", required: false }
+      - { label: "Обкладинка", name: "featuredImage", widget: "image", required: false }
+      - { label: "Текст", name: "body", widget: "markdown" }
+

@@ -1,7 +1,10 @@
 ---
 title: "Doctor? Optional. How AI Is Disrupting Healthcare..."
 date: 2025-09-13
+slug: "doctor-optional"
 featuredImage: "/uploads/ai-doctor.png"
+translationKey: "doctor-optional"
+draft: false
 ---
 Doctor? Optional. How AI Is Disrupting Healthcare Before Regulations Catch Up
 

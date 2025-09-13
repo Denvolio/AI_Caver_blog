@@ -1,42 +1,31 @@
-baseURL = "https://aicaver.com/"
-title = "AI Caver"
-theme = "LoveIt"
-defaultContentLanguage = "en"
-enableRobotsTXT = true
-paginate = 10
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    weight = 1
-    contentDir = "content/en"
-  [languages.uk]
-    languageName = "Українська"
-    weight = 2
-    contentDir = "content/uk"
+title = "AICaver"
 
 [params]
   description = "Minimal bilingual blog (EN/UK)"
-  defaultTheme = "auto"  # авто светлая/тёмная
+  defaultTheme = "auto"
 
   [params.author]
     name  = "Denys Voroshylov"
     email = "author@aicaver.com"
     link  = "https://aicaver.com"
 
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+  # Главная: аватар и слоган
+  [params.home]
+    [params.home.profile]
+      enable    = true
+      avatarURL = "/uploads/ai-caver-avatar.png"
+      subtitle  = "Real-world AI, automation & resilient systems."
+
+  # Шапка LoveIt: мини-лого и текст рядом
+  [params.header]
+    [params.header.title]
+      logo   = "/uploads/ai-caver-mini.svg"
+      name   = "AICaver"
+      pre    = ""
+      post   = ""
+      typeit = false
+
+
 
 
 

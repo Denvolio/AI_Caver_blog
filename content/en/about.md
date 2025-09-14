@@ -6,8 +6,10 @@ menu:
     weight: 3
 ---
 
-![Denys Voroshylov speaking](/uploads/denys-speaking-2.png)
-
+<!-- верхняя -->
+<img src="/uploads/denys-speaking-2.png"
+     alt="Denys Voroshylov speaking"
+     width="900" style="max-width:100%;height:auto;border-radius:12px">
 ## Hi, I’m Denys — AI enthusiast & optimist
 
 **AI Caver** is my research playground. I don’t track model leaderboards — I observe **how AI changes people**: daily routines, decisions, incentives, work, care, and play.  
@@ -28,7 +30,10 @@ This site is a **field notebook**: experiments, failures with lessons, small too
 - **Privacy by default.** Minimal data, local when possible.  
 - **Document the path.** Share context, not just results.
 
-![Portrait — Denys Voroshylov](/uploads/denys-speaking-1.png)
+<!-- нижняя -->
+<img src="/uploads/denys-speaking-1.png"
+     alt="Denys Voroshylov portrait"
+     width="900" style="max-width:100%;height:auto;border-radius:12px">
 
 ### Me, professionally
 Marketing Automation & Growth Specialist with **15+ years** in B2B/B2C. I build multi-channel automation that cuts manual work and improves conversion efficiency.

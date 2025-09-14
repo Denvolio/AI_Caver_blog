@@ -10,6 +10,7 @@ menu:
 <img src="/uploads/denys-speaking-2.png"
      alt="Denys Voroshylov speaking"
      width="900" style="max-width:100%;height:auto;border-radius:12px">
+
 ## Hi, I’m Denys — AI enthusiast & optimist
 
 **AI Caver** is my research playground. I don’t track model leaderboards — I observe **how AI changes people**: daily routines, decisions, incentives, work, care, and play.  

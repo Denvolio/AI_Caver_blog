@@ -6,11 +6,11 @@ menu:
     weight: 3
 ---
 
-<!-- верхняя (контейнер ограничивает ширину) -->
-<div style="max-width:900px;margin:0 auto 1.5rem;">
+<!-- верхняя -->
+<div style="max-width:560px;margin:0 auto 1.5rem;">
   <img src="/uploads/denys-speaking-2.png"
        alt="Denys Voroshylov speaking"
-       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
 </div>
 
 ## Hi, I’m Denys — AI enthusiast & optimist
@@ -34,10 +34,10 @@ This site is a **field notebook**: experiments, failures with lessons, small too
 - **Document the path.** Share context, not just results.
 
 <!-- нижняя -->
-<div style="max-width:900px;margin:2rem auto 0;">
+<div style="max-width:560px;margin:2rem auto 0;">
   <img src="/uploads/denys-speaking-1.png"
        alt="Denys Voroshylov portrait"
-       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
 </div>
 
 ### Me, professionally

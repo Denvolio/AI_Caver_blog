@@ -7,15 +7,33 @@ menu:
 ---
 
 <style>
-  .about-row{display:flex;gap:24px;align-items:flex-start;max-width:1000px;margin:0 auto 2rem;}
-  .about-row.reverse{flex-direction:row-reverse;}
-  .about-row img{width:420px;max-width:45%;height:auto;border-radius:12px;display:block}
-  .about-row .col{flex:1;min-width:0}
+  /* Общий контейнер: две колонки на десктопе */
+  .about-row{
+    display:flex; gap:24px; align-items:flex-start;
+    max-width:1000px; margin:0 auto 2rem;
+  }
+  /* Фото — ещё компактнее */
+  .about-row img{
+    width:360px;            /* было 420 */
+    max-width:42%;
+    height:auto; border-radius:12px; display:block;
+    flex:0 0 360px;
+  }
+  .about-row .col{
+    flex:1 1 0; min-width:0;
+    overflow-wrap:anywhere; word-break:break-word; /* чтобы длинные токены не ломали вёрстку */
+  }
+  /* Второй ряд — зеркально */
+  .about-row.reverse{ flex-direction:row-reverse; }
+
+  /* Мобильная адаптация: ОБА ряда становятся колонкой */
   @media (max-width: 900px){
-    .about-row{flex-direction:column}
-    .about-row img{width:100%;max-width:100%}
+    .about-row, .about-row.reverse{ flex-direction:column; }
+    .about-row img{ width:100%; max-width:100%; flex:0 0 auto; }
+    .about-row .col{ width:100%; }
   }
 </style>
+
 
 <div class="about-row">
   <img src="/uploads/denys-speaking-2.png" alt="Denys Voroshylov speaking" loading="lazy">

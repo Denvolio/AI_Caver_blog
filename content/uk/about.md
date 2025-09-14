@@ -6,10 +6,12 @@ menu:
     weight: 3
 ---
 
-<!-- верхняя -->
-<img src="/uploads/denys-speaking-2.png"
-     alt="Denys Voroshylov speaking"
-     width="900" style="max-width:100%;height:auto;border-radius:12px">
+<!-- верхня -->
+<div style="max-width:900px;margin:0 auto 1.5rem;">
+  <img src="/uploads/denys-speaking-2.png"
+       alt="Денис Ворошилов — виступ"
+       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+</div>
 
 ## Привіт! Я Денис — ентузіаст і оптиміст ШІ
 
@@ -31,11 +33,13 @@ menu:
 - **Приватність за замовчуванням.** Мінімум даних, локально де можливо.  
 - **Документуємо шлях.** Ділимося контекстом, не лише результатами.
 
-<!-- нижняя -->
-<img src="/uploads/denys-speaking-1.png"
-     alt="Denys Voroshylov portrait"
-     width="900" style="max-width:100%;height:auto;border-radius:12px">
-     
+<!-- нижня -->
+<div style="max-width:900px;margin:2rem auto 0;">
+  <img src="/uploads/denys-speaking-1.png"
+       alt="Портрет — Денис Ворошилов"
+       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+</div>
+
 ### Кілька слів про мене
 Фахівець із **маркетингової автоматизації та зростання** з **15+ роками** досвіду в B2B/B2C. Будую багатоканальні системи, що зменшують ручну працю та підвищують ефективність конверсій.
 
@@ -49,4 +53,5 @@ menu:
 ### Контакт
 Маєш історію, датасет або фейл для розбору? Пиши на **author@aicaver.com**.  
 Якщо матеріал був корисним — пошир його. Це найкраща підтримка.
+
 

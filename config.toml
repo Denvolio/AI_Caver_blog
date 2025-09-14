@@ -80,6 +80,10 @@ taxonomy= ["HTML", "RSS"]
 term    = ["HTML", "RSS"]
 page    = ["HTML"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 
 

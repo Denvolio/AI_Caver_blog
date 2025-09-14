@@ -6,7 +6,10 @@ menu:
     weight: 3
 ---
 
-![Денис Ворошилов — виступ](/uploads/denys-speaking-2.png)
+<!-- верхняя -->
+<img src="/uploads/denys-speaking-2.png"
+     alt="Denys Voroshylov speaking"
+     width="900" style="max-width:100%;height:auto;border-radius:12px">
 
 ## Привіт! Я Денис — ентузіаст і оптиміст ШІ
 
@@ -28,8 +31,11 @@ menu:
 - **Приватність за замовчуванням.** Мінімум даних, локально де можливо.  
 - **Документуємо шлях.** Ділимося контекстом, не лише результатами.
 
-![Портрет — Денис Ворошилов](/uploads/denys-speaking-1.png)
-
+<!-- нижняя -->
+<img src="/uploads/denys-speaking-1.png"
+     alt="Denys Voroshylov portrait"
+     width="900" style="max-width:100%;height:auto;border-radius:12px">
+     
 ### Кілька слів про мене
 Фахівець із **маркетингової автоматизації та зростання** з **15+ роками** досвіду в B2B/B2C. Будую багатоканальні системи, що зменшують ручну працю та підвищують ефективність конверсій.
 

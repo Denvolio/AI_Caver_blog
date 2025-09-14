@@ -23,10 +23,11 @@ paginate = 10
     email = "author@aicaver.com"
     link  = "https://aicaver.com"
 
+# Подключение кастомного JS через LoveIt (у тебя: assets/js/inline-logo.js)
 [params.assets]
   customJS = ["js/inline-logo.js"]
 
-# --- Главная: аватар + слоган (ПО ЯЗЫКАМ) ---
+# --- Главная: аватар + слоган (по языкам) ---
 [languages.en.params.home.profile]
 enable    = true
 avatarURL = "/uploads/ai-caver-avatar.png"
@@ -37,7 +38,7 @@ enable    = true
 avatarURL = "/uploads/ai-caver-avatar.png"
 subtitle  = "Що глибше ми занурюємося в надра ШІ, то темніша темрява й крутіший схил."
 
-# --- Шапка LoveIt: мини-лого + бренд (глобально для обоих языков) ---
+# --- Шапка LoveIt: мини-лого + бренд ---
 [params.header]
   [params.header.title]
     logo   = "/uploads/ai-caver-mini.svg"
@@ -60,6 +61,10 @@ subtitle  = "Що глибше ми занурюємося в надра ШІ, �
     name = "About"
     url = "/about/"
     weight = 3
+  [[languages.en.menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
 
 [languages.uk.menu]
   [[languages.uk.menu.main]]
@@ -74,8 +79,17 @@ subtitle  = "Що глибше ми занурюємося в надра ШІ, �
     name = "Про сайт"
     url = "/uk/about/"
     weight = 3
+  [[languages.uk.menu.main]]
+    name = "Теги"
+    url = "/uk/tags/"
+    weight = 4
 
-# --- Гарантируем HTML на главной (RSS остаётся по /index.xml) ---
+# --- Таксономии (явно) ---
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# --- HTML+RSS для разных типов страниц ---
 [outputs]
 home    = ["HTML", "RSS"]
 section = ["HTML", "RSS"]
@@ -83,6 +97,7 @@ taxonomy= ["HTML", "RSS"]
 term    = ["HTML", "RSS"]
 page    = ["HTML"]
 
+# --- Разрешаем сырой HTML в Markdown (для наших блоков) ---
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

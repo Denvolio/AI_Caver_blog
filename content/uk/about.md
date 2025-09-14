@@ -6,11 +6,11 @@ menu:
     weight: 3
 ---
 
-<!-- верхня -->
-<div style="max-width:900px;margin:0 auto 1.5rem;">
+<!-- верхняя -->
+<div style="max-width:560px;margin:0 auto 1.5rem;">
   <img src="/uploads/denys-speaking-2.png"
-       alt="Денис Ворошилов — виступ"
-       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+       alt="Denys Voroshylov speaking"
+       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
 </div>
 
 ## Привіт! Я Денис — ентузіаст і оптиміст ШІ
@@ -33,11 +33,11 @@ menu:
 - **Приватність за замовчуванням.** Мінімум даних, локально де можливо.  
 - **Документуємо шлях.** Ділимося контекстом, не лише результатами.
 
-<!-- нижня -->
-<div style="max-width:900px;margin:2rem auto 0;">
+<!-- нижняя -->
+<div style="max-width:560px;margin:2rem auto 0;">
   <img src="/uploads/denys-speaking-1.png"
-       alt="Портрет — Денис Ворошилов"
-       style="width:100% !important;height:auto;display:block;border-radius:12px" loading="lazy">
+       alt="Denys Voroshylov portrait"
+       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
 </div>
 
 ### Кілька слів про мене

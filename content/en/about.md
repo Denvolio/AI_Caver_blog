@@ -6,50 +6,66 @@ menu:
     weight: 3
 ---
 
-<!-- верхняя -->
-<div style="max-width:560px;margin:0 auto 1.5rem;">
-  <img src="/uploads/denys-speaking-2.png"
-       alt="Denys Voroshylov speaking"
-       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
+<style>
+  .about-row{display:flex;gap:24px;align-items:flex-start;max-width:1000px;margin:0 auto 2rem;}
+  .about-row.reverse{flex-direction:row-reverse;}
+  .about-row img{width:420px;max-width:45%;height:auto;border-radius:12px;display:block}
+  .about-row .col{flex:1;min-width:0}
+  @media (max-width: 900px){
+    .about-row{flex-direction:column}
+    .about-row img{width:100%;max-width:100%}
+  }
+</style>
+
+<div class="about-row">
+  <img src="/uploads/denys-speaking-2.png" alt="Denys Voroshylov speaking" loading="lazy">
+  <div class="col">
+
+  <h2>Hi, I’m Denys — AI enthusiast & optimist</h2>
+
+  <p><strong>AI Caver</strong> is my research playground. I don’t track model leaderboards — I observe <strong>how AI changes people</strong>: daily routines, decisions, incentives, work, care, and play. This site is a <strong>field notebook</strong>: experiments, failures with lessons, small tools that stick, and essays about behavior shifts under the pressure of automation.</p>
+
+  <h3>What you’ll find here</h3>
+  <ul>
+    <li><strong>Research.</strong> I continuously collect data about AI adoption and practices, and analyze how work models and human behavior change.</li>
+    <li><strong>AI-Diary.</strong> A running log of how AI reshapes <em>my own life</em> — strong enough to be worth documenting.</li>
+    <li><strong>Field notes</strong> — practical write-ups from real use (what worked, what didn’t, why).</li>
+    <li><strong>Experiments</strong> — tiny projects to test assumptions.</li>
+    <li><strong>Playbooks</strong> — repeatable workflows for busy humans.</li>
+    <li><strong>Essays</strong> — how AI nudges individual choices and collective behavior.</li>
+  </ul>
+
+  <h3>Principles</h3>
+  <ul>
+    <li><strong>Optimism with guardrails.</strong> Believe in progress, measure risks.</li>
+    <li><strong>Hands-on over hype.</strong> Tools that ship beat slides that shine.</li>
+    <li><strong>Clarity and agency.</strong> Humans stay in control.</li>
+    <li><strong>Privacy by default.</strong> Minimal data, local when possible.</li>
+    <li><strong>Document the path.</strong> Share context, not just results.</li>
+  </ul>
+
+  </div>
 </div>
 
-## Hi, I’m Denys — AI enthusiast & optimist
+<div class="about-row reverse">
+  <img src="/uploads/denys-speaking-1.png" alt="Denys Voroshylov portrait" loading="lazy">
+  <div class="col">
 
-**AI Caver** is my research playground. I don’t track model leaderboards — I observe **how AI changes people**: daily routines, decisions, incentives, work, care, and play.  
-This site is a **field notebook**: experiments, failures with lessons, small tools that stick, and essays about behavior shifts under the pressure of automation.
+  <h3>Me, professionally</h3>
+  <p>Marketing Automation & Growth Specialist with <strong>15+ years</strong> in B2B/B2C. I build multi-channel automation that cuts manual work and improves conversion efficiency.</p>
 
-### What you’ll find here
-- **Research.** I continuously collect data about AI adoption and practices, and analyze how work models and human behavior change.  
-- **AI-Diary.** A running log of how AI reshapes **my own life** — strong enough to be worth documenting.  
-- **Field notes** — practical write-ups from real use (what worked, what didn’t, why).  
-- **Experiments** — tiny projects to test assumptions.  
-- **Playbooks** — repeatable workflows for busy humans.  
-- **Essays** — how AI nudges individual choices and collective behavior.
+  <ul>
+    <li><strong>Stacks & skills:</strong> Go High Level, ActiveCampaign, Brevo, Salesforce/Zoho, Make/Zapier, API/RPA, <strong>Python</strong> for data pipelines, SQL/Looker/BigQuery, webinar & leadgen systems.</li>
+    <li><strong>Systems I build:</strong> webinars → CRM → nurturing → analytics; trial-to-paid tracking; role-based comms; dashboards for real-time funnels.</li>
+    <li><strong>Recent roles:</strong> Growth & Marketing Automation Lead at <strong>WhereScape</strong>; previously Head of Marketing at <strong>Devart</strong>; Product Marketing at <strong>Gameloft</strong>; strategy roles in agencies & product teams.</li>
+    <li><strong>Trainer & speaker:</strong> 20+ conference talks, ~10 training programs on marketing automation and practical AI for teams.</li>
+  </ul>
 
-### Principles
-- **Optimism with guardrails.** Believe in progress, measure risks.  
-- **Hands-on over hype.** Tools that ship beat slides that shine.  
-- **Clarity and agency.** Humans stay in control.  
-- **Privacy by default.** Minimal data, local when possible.  
-- **Document the path.** Share context, not just results.
+  <p>Based in <strong>Gdańsk, Poland</strong>. Languages: <strong>English (Advanced)</strong>, Ukrainian/Russian (native), Polish (basic).</p>
 
-<!-- нижняя -->
-<div style="max-width:560px;margin:2rem auto 0;">
-  <img src="/uploads/denys-speaking-1.png"
-       alt="Denys Voroshylov portrait"
-       style="width:100%;height:auto;display:block;border-radius:12px" loading="lazy">
+  <h3>Get in touch</h3>
+  <p>Got a story, dataset, or failure to dissect? Email <strong>author@aicaver.com</strong>. If a post helped you — share it. That’s the best fuel for this project.</p>
+
+  </div>
 </div>
 
-### Me, professionally
-Marketing Automation & Growth Specialist with **15+ years** in B2B/B2C. I build multi-channel automation that cuts manual work and improves conversion efficiency.
-
-- **Stacks & skills:** Go High Level, ActiveCampaign, Brevo, Salesforce/Zoho, Make/Zapier, API/RPA, **Python** for data pipelines, SQL/Looker/BigQuery, webinar & leadgen systems.  
-- **Systems I build:** webinars → CRM → nurturing → analytics; trial-to-paid tracking; role-based comms; dashboards for real-time funnels.  
-- **Recent roles:** Growth & Marketing Automation Lead at **WhereScape**; previously Head of Marketing at **Devart**; Product Marketing at **Gameloft**; strategy roles in agencies and product teams.  
-- **Trainer & speaker:** 20+ conference talks, ~10 training programs on marketing automation and practical AI for teams.
-
-Based in **Gdańsk, Poland**. Languages: **English (Advanced), Ukrainian/Russian (native), Polish (basic).**
-
-### Get in touch
-Got a story, dataset, or failure to dissect? Email **author@aicaver.com**.  
-If a post helped you — share it. That’s the best fuel for this project.

@@ -19,8 +19,6 @@ Across town in London, graphic designer Jadun Sykes stepped out of a glass meeti
 
 That’s the opening scene of a story we are all groping through in the dark. It includes fear and exaggeration, austerity and big business, haste and sobriety—failures, yes, and also new roles. And here is the twist: AI doesn’t only take jobs; it also creates them where yesterday there wasn’t even a name.
 
-![Robots staffing an employment center](/uploads/hero-employment-center-robots-1920x576.png)
-
 ## The Year the First Rung Disappeared
 
 For decades, the ramp into a profession was made of simple tasks. In newsrooms: templated layouts and basic fact checks. In service companies: stock replies to stock questions. In offices: cleaning spreadsheets. Then 2025 arrived and that first rung turned to thin ice. Managers realized that, right now, bots are “good enough” at the chores that once trained interns.
@@ -100,3 +98,4 @@ Good stories rarely have a single villain. There are leaders chasing progress wh
 Sykes, the designer, put it this way: “I went home, opened my laptop, and wrote: I need a compass job, not a mirror.” In his notebook the new words are “orchestration,” “deflection,” “human-in-the-loop.” Next to them: three crisp case studies he now brings to interviews—how many minutes and how much money his little agent saved, and exactly how he guarantees its quality.
 
 Here is the real ending: AI doesn’t relieve us of responsibility—it hands it to those willing to carry it. Tomorrow every strong team will have **bosses of agents**—people who set goals for machines, keep them within bounds, build the process, and own the result. Fear is a dark room. The light goes on not with a slogan but with a habit of counting: what I do each day → what I’ll hand to a machine → what I will own. In that moment you stop being “another specialist” and become what frontier firms are hiring for: a conductor who hears both people and algorithms—and makes them play together.
+

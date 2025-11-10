@@ -1,6 +1,7 @@
 baseURL = "https://aicaver.com/"
 title = "AICaver"
 theme = "LoveIt"
+googleAnalytics = "G-12R63X61XL"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 paginate = 10

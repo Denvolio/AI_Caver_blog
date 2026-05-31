@@ -78,9 +78,6 @@ In traditional stock markets, AI usually remains a co-pilot. It helps analyze, e
 Coinbase Advisor is an interesting intermediate example. Coinbase describes it as an AI advisor that helps users with investment decisions and guides them from idea to execution. But that does not mean the system trades fully and discretionarily on behalf of the user. In Coinbase's public materials, the user remains inside the decision loop, and the tool is positioned as a guidance and education layer.
 
 In crypto, things move faster. The reasons are obvious: markets operate 24/7, APIs have long been normal, bot culture and automation are already familiar, on-chain data is open, and product boundaries between analysis and execution are much softer.
-
-![Stocks vs Crypto: different roles for AI](/uploads/stocks-vs-crypto-ai-1600x900.png)
-
 Binance Ai Pro Beta is a good example of this direction. Binance introduced it as an AI tool that works through a separate AI Account and helps with market analysis, strategies, and trading workflows. In its FAQ and announcements, Binance emphasizes access limits, regional conditions, and risks. But the fact itself matters: a major crypto exchange is testing an AI layer that is closer to execution than a normal chatbot.
 
 OKX Agent Trade Kit moves even further toward infrastructure for AI agents. OKX describes it as a toolkit that allows AI assistants to interact with an account and trading tools through Model Context Protocol. In OKX documentation and the GitHub repository, the idea is quite direct: the user describes what they want, the AI calls the right tools, and actions can be performed through a locally launched toolkit.
@@ -210,3 +207,4 @@ FINRA materials on AI in the Securities Industry.
 IOSCO report: "Artificial Intelligence in Capital Markets."
 
 NBER paper: "AI-Powered Trading, Algorithmic Collusion, and Price Efficiency."
+

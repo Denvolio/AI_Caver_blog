@@ -1,5 +1,5 @@
 baseURL = "https://aicaver.com/"
-title = "AICaver"
+title = "AI Caver — How AI Reshapes Work, Health, Finance and Daily Life"
 theme = "LoveIt"
 googleAnalytics = "G-12R63X61XL"
 defaultContentLanguage = "en"
@@ -11,18 +11,35 @@ paginate = 10
     languageName = "English"
     weight = 1
     contentDir = "content/en"
+    title = "AI Caver — How AI Reshapes Work, Health, Finance and Daily Life"
+    [languages.en.params]
+      description = "AI Caver is a research blog exploring how artificial intelligence is changing jobs, healthcare, trading, and everyday decisions. By Denys Voroshylov."
+      keywords = ["AI", "artificial intelligence", "AI trading", "AI jobs", "AI healthcare", "machine learning", "LLM", "automation"]
   [languages.uk]
     languageName = "Українська"
     weight = 2
     contentDir = "content/uk"
+    title = "AI Caver — Як ШІ змінює роботу, здоров'я, фінанси та повсякденне життя"
+    [languages.uk.params]
+      description = "AI Caver — дослідницький блог про те, як штучний інтелект змінює роботу, медицину, трейдинг і щоденні рішення. Автор — Денис Ворошилов."
+      keywords = ["ШІ", "штучний інтелект", "AI трейдинг", "автоматизація", "нейромережі", "LLM", "AI та робота"]
 
 [params]
-  description = "Minimal bilingual blog (EN/UK)"
-  defaultTheme = "auto"  # авто светлая/тёмная
+  description = "AI Caver is a research blog exploring how artificial intelligence is changing jobs, healthcare, trading, and everyday decisions."
+  defaultTheme = "auto"
   [params.author]
     name  = "Denys Voroshylov"
     email = "author@aicaver.com"
     link  = "https://aicaver.com"
+
+  # SEO settings for LoveIt
+  [params.seo]
+    image = "/uploads/ai-caver-avatar.png"
+    thumbnailUrl = "/uploads/ai-caver-avatar.png"
+
+  [params.app]
+    title = "AI Caver"
+    noFavicon = false
 
 # Подключение кастомного JS через LoveIt (у тебя: assets/js/inline-logo.js)
 [params.assets]
@@ -90,6 +107,12 @@ subtitle  = "Що глибше ми занурюємося в надра ШІ, �
   tag = "tags"
   category = "categories"
 
+# --- Sitemap ---
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 # --- HTML+RSS для разных типов страниц ---
 [outputs]
 home    = ["HTML", "RSS"]
@@ -103,7 +126,3 @@ page    = ["HTML"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-
-
-

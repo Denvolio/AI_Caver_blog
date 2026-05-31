@@ -1,6 +1,6 @@
 ---
 title: "AI-трейдинг у 2026 році: кращі помічники, але не кращі оракули"
-date: 2026-06-01
+date: 2026-05-31
 slug: "ai-trading-2026-krashchi-pomichnyky-ale-ne-krashchi-orakuly"
 featuredImage: "/uploads/hero-ai-trading-2026-1920x576.png"
 translationKey: "ai-trading-2026"
@@ -207,4 +207,5 @@ AI-трейдинг у 2026 році реальний. Він корисний. 
 Звіт IOSCO "Artificial Intelligence in Capital Markets."
 
 Дослідження NBER "AI-Powered Trading, Algorithmic Collusion, and Price Efficiency."
+
 

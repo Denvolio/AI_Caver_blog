@@ -1,6 +1,6 @@
 ---
 title: "AI-скорочення реальні — чи це просто зручне виправдання?"
-date: 2026-06-06
+date: 2026-06-05
 slug: "ai-layoffs-real-or-convenient-excuse"
 featuredImage: "/uploads/hero-ai-layoffs-broken-stairs.png"
 translationKey: "ai-layoffs-real-or-excuse"

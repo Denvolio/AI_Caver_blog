@@ -3,6 +3,7 @@ title: "Are AI Layoffs Real — Or Just a Convenient Excuse?"
 date: 2026-06-05
 slug: "ai-layoffs-real-or-convenient-excuse"
 featuredImage: "/uploads/hero-ai-layoffs-broken-stairs.png"
+images: ["/uploads/hero-ai-layoffs-broken-stairs.png"]
 translationKey: "ai-layoffs-real-or-excuse"
 draft: false
 tags: ["AI and jobs", "layoffs", "labor market", "automation", "career"]
@@ -64,3 +65,4 @@ Nearly every conversation about AI and jobs focuses on losses. But there's anoth
 The worst advice you can give someone today is "just learn AI." It sounds right but means almost nothing. A more useful principle: value is shifting from executing simple tasks to being able to manage complex processes. Not just writing a text, but understanding what kind of text is needed, for whom, with what argument, and how to verify it doesn't read like hollow machine output. Not just writing code, but understanding the system, its constraints, its architecture, its edge cases, and what will happen six months after the merge. Not just producing a report, but knowing which metrics are misleading and where the model confidently made something up.
 
 AI performs well where the task is clear, repetitive, and sufficiently formalized. Humans become more valuable where the task is ambiguous, the stakes are high, context matters, and the cost of a mistake is significant. This isn't a call to flee digital professions — but a career built solely on executing basic tasks is no longer a safe bet. That used to be enough to get started. Now it may not be enough to get in the door at all.
+

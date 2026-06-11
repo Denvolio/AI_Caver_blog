@@ -3,6 +3,7 @@ title: "AI Trading in 2026: Better Assistants, Not Better Oracles"
 date: 2026-05-31
 slug: "ai-trading-2026-better-assistants-not-better-oracles"
 featuredImage: "/uploads/hero-ai-trading-2026-1920x576.png"
+images: ["/uploads/hero-ai-trading-2026-1920x576.png"]
 translationKey: "ai-trading-2026"
 draft: false
 tags: ["AI trading", "cryptocurrency", "stocks", "risk management", "fintech"]
@@ -207,5 +208,6 @@ FINRA materials on AI in the Securities Industry.
 IOSCO report: "Artificial Intelligence in Capital Markets."
 
 NBER paper: "AI-Powered Trading, Algorithmic Collusion, and Price Efficiency."
+
 
 

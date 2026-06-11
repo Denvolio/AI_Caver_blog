@@ -3,6 +3,7 @@ title: "Doctor? Optional. How AI Is Disrupting Healthcare..."
 date: 2025-09-13
 slug: "doctor-optional"
 featuredImage: "/uploads/ai-doctor.png"
+images: ["/uploads/ai-doctor.png"]
 translationKey: "doctor-optional"
 draft: false
 ---
@@ -120,3 +121,4 @@ And for businesses? The market is forming where traditional coverage is silent.
 When fully autonomous GPT-9 diagnostic kiosks roll out in a decade, some of us will say: we’ve been there. We healed. We just didn’t wait.
 
 > “AI isn’t your doctor. But it’s sitting right next to you as you decide whether to treat or delay. And often, it says something worth hearing. The key is to listen with wisdom — not instead of it.”
+

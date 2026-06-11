@@ -3,6 +3,7 @@ title: "I Woke Up Jobless—and Found a Bot Doing My Work"
 date: 2025-11-09
 slug: "i-woke-up-jobless-and-found-a-bot-doing-my-work"
 featuredImage: "/uploads/hero-employment-center-robots-1920x576.png"
+images: ["/uploads/hero-employment-center-robots-1920x576.png"]
 translationKey: "jobless-bot-2025"
 draft: false
 tags: ["AI jobs", "automation", "AI-Ops", "governance", "careers"]
@@ -98,4 +99,5 @@ Good stories rarely have a single villain. There are leaders chasing progress wh
 Sykes, the designer, put it this way: “I went home, opened my laptop, and wrote: I need a compass job, not a mirror.” In his notebook the new words are “orchestration,” “deflection,” “human-in-the-loop.” Next to them: three crisp case studies he now brings to interviews—how many minutes and how much money his little agent saved, and exactly how he guarantees its quality.
 
 Here is the real ending: AI doesn’t relieve us of responsibility—it hands it to those willing to carry it. Tomorrow every strong team will have **bosses of agents**—people who set goals for machines, keep them within bounds, build the process, and own the result. Fear is a dark room. The light goes on not with a slogan but with a habit of counting: what I do each day → what I’ll hand to a machine → what I will own. In that moment you stop being “another specialist” and become what frontier firms are hiring for: a conductor who hears both people and algorithms—and makes them play together.
+
 

@@ -25,6 +25,7 @@ paginate = 10
       keywords = ["ШІ", "штучний інтелект", "AI трейдинг", "автоматизація", "нейромережі", "LLM", "AI та робота"]
 
 [params]
+  images = ["/uploads/ai-caver-avatar.png"]
   description = "AI Caver is a research blog exploring how artificial intelligence is changing jobs, healthcare, trading, and everyday decisions."
   defaultTheme = "auto"
   [params.author]

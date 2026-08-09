@@ -9,63 +9,40 @@
     ? "Підписатися на розсилку AI Caver"
     : "Subscribe to the AI Caver newsletter";
   const subscribeUrl = isUkrainian ? "/uk/subscribe/" : "/subscribe/";
-  const bannerLabel = isUkrainian
-    ? "Нові матеріали AI Caver — у вашій пошті"
-    : "New AI Caver essays — in your inbox";
 
   function createSlot(variant) {
     const slot = document.createElement("div");
     slot.className = "newsletter-slot newsletter-slot--" + variant;
 
-    let scriptTarget = slot;
-
-    if (variant === "banner") {
-      slot.id = "newsletter-banner";
-
-      const inner = document.createElement("div");
-      inner.className = "newsletter-banner__inner";
-      slot.appendChild(inner);
-
-      const label = document.createElement("span");
-      label.className = "newsletter-banner__label";
-      label.textContent = bannerLabel;
-      inner.appendChild(label);
-
-      const embed = document.createElement("div");
-      embed.className = "newsletter-banner__embed";
-      inner.appendChild(embed);
-      scriptTarget = embed;
-    }
-
     const script = document.createElement("script");
     script.async = true;
     script.dataset.uid = uid;
     script.src = "https://https-www-aicaver-com.kit.com/" + uid + "/index.js";
-    scriptTarget.appendChild(script);
+    slot.appendChild(script);
 
     return slot;
   }
 
-  function createMobileSubscribeLink() {
+  function createSubscribeLink(withIcon) {
     const link = document.createElement("a");
     link.className = "menu-item newsletter-menu-link";
     link.href = subscribeUrl;
     link.title = subscribeTitle;
-    link.innerHTML = '<i class="far fa-envelope fa-fw" aria-hidden="true"></i>' + subscribeLabel;
+    link.innerHTML = (withIcon ? '<i class="far fa-envelope fa-fw" aria-hidden="true"></i>' : "") + subscribeLabel;
     return link;
   }
 
   function insertSlots() {
-    const desktopHeader = document.querySelector("#header-desktop");
-    const desktopViewport = window.matchMedia("(min-width: 681px)").matches;
-    if (desktopViewport && desktopHeader && !document.querySelector("#newsletter-banner")) {
-      desktopHeader.insertAdjacentElement("afterend", createSlot("banner"));
+    const desktopMenu = document.querySelector("#header-desktop .menu-inner");
+    const desktopDelimiter = desktopMenu && desktopMenu.querySelector(".delimiter");
+    if (desktopMenu && !desktopMenu.querySelector(".newsletter-menu-link")) {
+      desktopMenu.insertBefore(createSubscribeLink(false), desktopDelimiter);
     }
 
     const mobileMenu = document.querySelector("#menu-mobile");
     const mobileThemeSwitch = mobileMenu && mobileMenu.querySelector(".theme-switch");
     if (mobileMenu && !mobileMenu.querySelector(".newsletter-menu-link")) {
-      mobileMenu.insertBefore(createMobileSubscribeLink(), mobileThemeSwitch);
+      mobileMenu.insertBefore(createSubscribeLink(true), mobileThemeSwitch);
     }
 
     const postFooter = document.querySelector("#post-footer");

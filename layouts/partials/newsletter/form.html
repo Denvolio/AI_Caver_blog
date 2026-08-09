@@ -1,0 +1,23 @@
+{{- $context := .context -}}
+{{- $variant := .variant | default "article" -}}
+{{- $isUkrainian := eq $context.Lang "uk" -}}
+{{- $uid := cond $isUkrainian "38804f916d" "f2105ba1ba" -}}
+{{- $formURL := printf "https://https-www-aicaver-com.kit.com/%s" $uid -}}
+{{- $scriptURL := printf "%s/index.js" $formURL -}}
+{{- $subscribeLabel := cond $isUkrainian "Підписатися" "Subscribe" -}}
+{{- $subscribeTitle := cond $isUkrainian "Підписатися на розсилку AI Caver" "Subscribe to the AI Caver newsletter" -}}
+{{- $subscribePage := "subscribe/" | relLangURL -}}
+
+<div class="newsletter-slot newsletter-slot--{{ $variant }}"{{ with .id }} id="{{ . }}"{{ end }}>
+    {{- if eq $variant "desktop" -}}
+        <div class="newsletter-slot__embed">
+            <script async data-uid="{{ $uid }}" src="{{ $scriptURL }}"></script>
+        </div>
+        <a class="newsletter-slot__cta" href="{{ $subscribePage }}" title="{{ $subscribeTitle }}">
+            <i class="far fa-envelope fa-fw" aria-hidden="true"></i>{{ $subscribeLabel }}
+        </a>
+    {{- else -}}
+        <script async data-uid="{{ $uid }}" src="{{ $scriptURL }}"></script>
+    {{- end -}}
+    <noscript><a href="{{ $formURL }}">{{ $subscribeLabel }}</a></noscript>
+</div>

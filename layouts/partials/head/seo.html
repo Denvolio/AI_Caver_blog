@@ -1,0 +1,60 @@
+{{- if .IsHome -}}
+    {{- $author := dict "@type" "Person" "name" (.Site.Params.Author.name | default "Denys Voroshylov") -}}
+    {{- $publisher := dict "@type" "Organization" "name" "AI Caver" -}}
+    {{- $data := dict
+        "@context" "https://schema.org"
+        "@type" "WebSite"
+        "url" .Permalink
+        "name" .Site.Title
+        "inLanguage" .Site.LanguageCode
+        "description" (.Site.Params.description | default "")
+        "author" $author
+        "publisher" $publisher
+    -}}
+    {{- with .Site.Params.seo.image -}}
+        {{- $data = merge $data (dict "image" (. | absURL)) -}}
+    {{- end -}}
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if .IsPage -}}
+    {{- $authorName := .Params.author | default .Site.Params.Author.name | default "Denys Voroshylov" -}}
+    {{- $author := dict "@type" "Person" "name" $authorName -}}
+    {{- $logo := .Site.Params.seo.image | default "/uploads/ai-caver-avatar.png" | absURL -}}
+    {{- $publisher := dict
+        "@type" "Organization"
+        "name" "AI Caver"
+        "logo" (dict "@type" "ImageObject" "url" $logo)
+    -}}
+    {{- $images := slice -}}
+    {{- range (.Params.images | default (slice .Params.featuredImage)) -}}
+        {{- with . -}}
+            {{- $images = $images | append (. | absURL) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if not $images -}}
+        {{- with .Site.Params.seo.image -}}
+            {{- $images = slice (. | absURL) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $published := .PublishDate -}}
+    {{- if $published.IsZero -}}{{- $published = .Date -}}{{- end -}}
+    {{- $data := dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" .Title
+        "inLanguage" .Site.LanguageCode
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+        "image" $images
+        "genre" .Type
+        "wordCount" .WordCount
+        "url" .Permalink
+        "datePublished" ($published.Format "2006-01-02T15:04:05-07:00")
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+        "publisher" $publisher
+        "author" $author
+        "description" .Description
+    -}}
+    {{- with .Params.tags -}}
+        {{- $data = merge $data (dict "keywords" .) -}}
+    {{- end -}}
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- end -}}

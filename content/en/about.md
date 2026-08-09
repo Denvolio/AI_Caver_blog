@@ -1,9 +1,6 @@
 ---
 title: "About"
 description: "AI Caver — a research log about how AI reshapes human life and behavior. By Denys Voroshylov — AI enthusiast, optimist, and marketing automation architect."
-menu:
-  main:
-    weight: 3
 ---
 
 <style>
@@ -86,4 +83,3 @@ menu:
 
   </div>
 </div>
-

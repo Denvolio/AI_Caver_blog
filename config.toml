@@ -1,4 +1,4 @@
-baseURL = "https://aicaver.com/"
+baseURL = "https://www.aicaver.com/"
 title = "AI Caver — How AI Reshapes Work, Health, Finance and Daily Life"
 theme = "LoveIt"
 googleAnalytics = "G-12R63X61XL"
@@ -50,11 +50,13 @@ paginate = 10
 [languages.en.params.home.profile]
 enable    = true
 avatarURL = "/uploads/ai-caver-avatar.png"
+title     = "AI Caver"
 subtitle  = "The deeper into AI we go, the darker it gets — and the steeper the slope."
 
 [languages.uk.params.home.profile]
 enable    = true
 avatarURL = "/uploads/ai-caver-avatar.png"
+title     = "AI Caver"
 subtitle  = "Що глибше ми занурюємося в надра ШІ, то темніша темрява й крутіший схил."
 
 # --- Шапка LoveIt: мини-лого + бренд ---

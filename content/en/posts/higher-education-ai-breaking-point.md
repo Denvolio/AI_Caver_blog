@@ -1,5 +1,6 @@
 ---
 title: "The Breaking Point for Higher Education: Student Work Is Getting Better. The Learning Is Not."
+seoTitle: "How AI Is Breaking Higher Education Assessment"
 date: 2026-08-09T00:30:00+02:00
 slug: "higher-education-ai-breaking-point"
 featuredImage: "/uploads/hero-higher-education-ai-breaking-point.jpg"
@@ -302,6 +303,10 @@ The future isn't a written exam versus an oral one. It's work with AI plus indep
 If strong student work no longer proves the competence of its author, what does the degree confirm?
 
 ---
+
+## Related reading
+
+The same boundary between using AI as an assistant and treating it as an oracle also shapes [AI-assisted trading](/posts/ai-trading-2026-better-assistants-not-better-oracles/). And the institutional incentives behind automation are examined from another angle in [Are AI Layoffs Real — Or Just a Convenient Excuse?](/posts/ai-layoffs-real-or-convenient-excuse/).
 
 ## Key sources
 

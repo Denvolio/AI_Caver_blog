@@ -4,7 +4,9 @@ theme = "LoveIt"
 googleAnalytics = "G-12R63X61XL"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [languages]
   [languages.en]
@@ -23,6 +25,15 @@ paginate = 10
     [languages.uk.params]
       description = "AI Caver — дослідницький блог про те, як штучний інтелект змінює роботу, медицину, трейдинг і щоденні рішення. Автор — Денис Ворошилов."
       keywords = ["ШІ", "штучний інтелект", "AI трейдинг", "автоматизація", "нейромережі", "LLM", "AI та робота"]
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru-RU"
+    weight = 3
+    contentDir = "content/ru"
+    title = "AI Caver — Как ИИ меняет работу, здоровье, финансы и повседневную жизнь"
+    [languages.ru.params]
+      description = "AI Caver — исследовательский блог о том, как искусственный интеллект меняет работу, медицину, трейдинг и повседневные решения. Автор — Денис Ворошилов."
+      keywords = ["ИИ", "искусственный интеллект", "AI трейдинг", "автоматизация", "нейросети", "LLM", "AI и работа"]
 
 [params]
   images = ["/uploads/ai-caver-avatar.png"]
@@ -58,6 +69,12 @@ enable    = true
 avatarURL = "/uploads/ai-caver-avatar.png"
 title     = "AI Caver"
 subtitle  = "Що глибше ми занурюємося в надра ШІ, то темніша темрява й крутіший схил."
+
+[languages.ru.params.home.profile]
+enable    = true
+avatarURL = "/uploads/ai-caver-avatar.png"
+title     = "AI Caver"
+subtitle  = "Чем глубже мы погружаемся в недра ИИ, тем темнее вокруг и круче склон."
 
 # --- Шапка LoveIt: мини-лого + бренд ---
 [params.header]
@@ -103,6 +120,24 @@ subtitle  = "Що глибше ми занурюємося в надра ШІ, �
   [[languages.uk.menu.main]]
     name = "Теги"
     url = "/uk/tags/"
+    weight = 4
+
+[languages.ru.menu]
+  [[languages.ru.menu.main]]
+    name = "Главная"
+    url = "/ru/"
+    weight = 1
+  [[languages.ru.menu.main]]
+    name = "Публикации"
+    url = "/ru/posts/"
+    weight = 2
+  [[languages.ru.menu.main]]
+    name = "О сайте"
+    url = "/ru/about/"
+    weight = 3
+  [[languages.ru.menu.main]]
+    name = "Теги"
+    url = "/ru/tags/"
     weight = 4
 
 # --- Таксономии (явно) ---

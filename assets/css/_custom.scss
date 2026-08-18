@@ -83,15 +83,11 @@
   .home .aicaver-desktop-hero {
     align-items: center;
     display: grid;
-    gap: clamp(2rem, 5vw, 6rem);
-    grid-template-columns: minmax(0, .92fr) minmax(25rem, 1.08fr);
-    min-height: 35rem;
-    padding: 3.5rem 0 3rem;
-    left: 50%;
-    position: relative;
+    gap: 2rem;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    min-height: 28rem;
+    padding: 2.75rem 0 2rem;
     text-align: left;
-    transform: translateX(-50%);
-    width: min(92vw, 1400px);
   }
 
   .aicaver-desktop-hero__copy { max-width: 39rem; }
@@ -145,14 +141,14 @@
   .aicaver-desktop-hero__socials i { font-size: .9rem; }
   .aicaver-desktop-hero__socials i { font-size: 1.35rem; }
   .aicaver-desktop-hero__subscribe {
-    max-width: 25rem;
-    padding-top: .25rem;
+    max-width: 20rem;
+    padding-top: 0;
   }
-  .aicaver-desktop-hero__subscribe-title { font-weight: 700; margin: 0 0 .65rem; }
+  .aicaver-desktop-hero__subscribe-title { font-weight: 700; margin: 0 0 .35rem; }
   .aicaver-desktop-hero__fineprint {
     color: $global-font-secondary-color;
     font-size: .72rem;
-    margin: .45rem 0 0;
+    margin: .2rem 0 0;
   }
   .aicaver-desktop-hero .newsletter-slot {
     margin: 0;
@@ -167,18 +163,18 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 35rem;
+    min-height: 28rem;
     position: relative;
   }
   .aicaver-desktop-hero__art-frame {
     border-radius: 48% 52% 52% 48% / 20% 25% 75% 80%;
     box-shadow: 0 2rem 5rem rgba(24, 27, 71, .28);
-    height: 36rem;
-    max-width: 34rem;
+    height: 25rem;
+    max-width: 23rem;
     overflow: hidden;
     position: relative;
     transform: rotate(2deg);
-    width: 92%;
+    width: 76%;
     z-index: 1;
   }
   .aicaver-desktop-hero__art img {

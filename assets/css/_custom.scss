@@ -135,15 +135,17 @@
   }
   .aicaver-desktop-hero .newsletter-slot__cta { display: none; }
   .aicaver-desktop-hero .ml-form-embedContent h4,
-  .aicaver-desktop-hero .ml-form-embedContent p { display: none !important; }
+  .aicaver-desktop-hero .ml-form-embedContent > p { display: none !important; }
+  .aicaver-desktop-hero .ml-form-embedContent .ml-form-checkboxRow,
+  .aicaver-desktop-hero .ml-form-embedContent .ml-form-checkboxRow p { display: block !important; }
   .aicaver-desktop-hero .ml-form-embedContent input { min-height: 2.8rem !important; }
   .aicaver-desktop-hero .ml-form-embedContent .ml-form-embedSubmit button { min-height: 2.8rem !important; }
   .aicaver-desktop-hero__art {
     align-items: center;
-    aspect-ratio: .9 / 1;
+    aspect-ratio: .82 / 1;
     display: flex;
     justify-content: center;
-    min-height: 32rem;
+    min-height: 36rem;
     position: relative;
     width: 100%;
   }

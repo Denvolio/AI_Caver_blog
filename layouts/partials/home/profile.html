@@ -42,9 +42,14 @@
 </div>
 
 {{/* Desktop-only hero. The mobile profile above remains the current mobile experience. */}}
+{{- $isUkrainian := eq .Lang "uk" -}}
+{{- $isRussian := eq .Lang "ru" -}}
+{{- $heroText := cond $isUkrainian "Досліджуємо, як ШІ змінює роботу, здоров’я, фінанси та повсякденне життя." (cond $isRussian "Исследуем, как ИИ меняет работу, здоровье, финансы и повседневную жизнь." "Exploring how AI reshapes work, health, finance, and everyday life.") -}}
+{{- $subscribeTitle := cond $isUkrainian "Отримуйте AI Caver на пошту" (cond $isRussian "Получайте AI Caver на почту" "Get AI Caver in your inbox") -}}
+{{- $fineprint := cond $isUkrainian "Без спаму. Відписатися можна будь-коли." (cond $isRussian "Без спама. Отписаться можно в любое время." "No spam. Unsubscribe anytime.") -}}
 <section class="aicaver-desktop-hero" aria-labelledby="aicaver-desktop-title">
     <div class="aicaver-desktop-hero__copy">
-        <p id="aicaver-desktop-title" class="aicaver-desktop-hero__subtitle">Exploring how AI reshapes work, health, finance, and everyday life. Independent essays, experiments, and investigations into the real impact of AI beyond the hype.</p>
+        <p id="aicaver-desktop-title" class="aicaver-desktop-hero__subtitle">{{ $heroText }}</p>
 
         <nav class="aicaver-desktop-hero__socials" aria-label="AI Caver on social media">
             <a href="https://x.com/aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
@@ -54,9 +59,9 @@
         </nav>
 
         <div class="aicaver-desktop-hero__subscribe">
-            <p class="aicaver-desktop-hero__subscribe-title">Get AI Caver in your inbox</p>
+            <p class="aicaver-desktop-hero__subscribe-title">{{ $subscribeTitle }}</p>
             {{ partial "newsletter/form.html" (dict "context" . "variant" "desktop" "id" "aicaver-desktop-newsletter") }}
-            <p class="aicaver-desktop-hero__fineprint">No spam. Unsubscribe anytime.</p>
+            <p class="aicaver-desktop-hero__fineprint">{{ $fineprint }}</p>
         </div>
     </div>
 

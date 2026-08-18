@@ -53,10 +53,14 @@
   }
 
   function localizeEmailFields(root) {
+    const prefilledEmail = new URLSearchParams(window.location.search).get("email");
     root.querySelectorAll('.newsletter-slot input[type="email"], .newsletter-slot input[name="email"]').forEach(function (input) {
       input.placeholder = config.placeholder;
       input.setAttribute("aria-label", config.placeholder);
       input.setAttribute("autocomplete", "email");
+      if (prefilledEmail && input.closest(".newsletter-slot--standalone") && !input.value) {
+        input.value = prefilledEmail;
+      }
     });
     root.querySelectorAll(".newsletter-slot .ml-form-embedSubmit button").forEach(function (button) {
       button.textContent = config.submitLabel;

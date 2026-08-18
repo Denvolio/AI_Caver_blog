@@ -87,7 +87,11 @@
     grid-template-columns: minmax(0, .92fr) minmax(25rem, 1.08fr);
     min-height: 35rem;
     padding: 3.5rem 0 3rem;
+    left: 50%;
+    position: relative;
     text-align: left;
+    transform: translateX(-50%);
+    width: min(92vw, 1400px);
   }
 
   .aicaver-desktop-hero__copy { max-width: 39rem; }

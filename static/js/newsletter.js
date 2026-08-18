@@ -1,24 +1,23 @@
 (function () {
   "use strict";
 
-  const isUkrainian = document.documentElement.lang.toLowerCase().startsWith("uk");
-  const placeholder = isUkrainian ? "Ваш email" : "Your email";
-  const uid = isUkrainian ? "38804f916d" : "f2105ba1ba";
-  const subscribeLabel = isUkrainian ? "Підписатися" : "Subscribe";
-  const subscribeTitle = isUkrainian
-    ? "Підписатися на розсилку AI Caver"
-    : "Subscribe to the AI Caver newsletter";
-  const subscribeUrl = isUkrainian ? "/uk/subscribe/" : "/subscribe/";
+  const language = document.documentElement.lang.toLowerCase();
+  const isUkrainian = language.startsWith("uk");
+  const isRussian = language.startsWith("ru");
+  const config = isUkrainian
+    ? { formId: "x9iEO0", placeholder: "Ваш email", subscribeLabel: "Підписатися", subscribeTitle: "Підписатися на розсилку AI Caver", subscribeUrl: "/uk/subscribe/" }
+    : isRussian
+      ? { formId: "704xqP", placeholder: "Ваш email", subscribeLabel: "Подписаться", subscribeTitle: "Подписаться на рассылку AI Caver", subscribeUrl: "/ru/subscribe/" }
+      : { formId: "w3V58o", placeholder: "Your email", subscribeLabel: "Subscribe", subscribeTitle: "Subscribe to the AI Caver newsletter", subscribeUrl: "/subscribe/" };
 
   function createSlot(variant) {
     const slot = document.createElement("div");
     slot.className = "newsletter-slot newsletter-slot--" + variant;
 
-    const script = document.createElement("script");
-    script.async = true;
-    script.dataset.uid = uid;
-    script.src = "https://https-www-aicaver-com.kit.com/" + uid + "/index.js";
-    slot.appendChild(script);
+    const embed = document.createElement("div");
+    embed.className = "ml-embedded";
+    embed.dataset.form = config.formId;
+    slot.appendChild(embed);
 
     return slot;
   }
@@ -26,9 +25,9 @@
   function createSubscribeLink(withIcon) {
     const link = document.createElement("a");
     link.className = "menu-item newsletter-menu-link";
-    link.href = subscribeUrl;
-    link.title = subscribeTitle;
-    link.innerHTML = (withIcon ? '<i class="far fa-envelope fa-fw" aria-hidden="true"></i>' : "") + subscribeLabel;
+    link.href = config.subscribeUrl;
+    link.title = config.subscribeTitle;
+    link.innerHTML = (withIcon ? '<i class="far fa-envelope fa-fw" aria-hidden="true"></i>' : "") + config.subscribeLabel;
     return link;
   }
 
@@ -54,9 +53,9 @@
   }
 
   function localizeEmailFields(root) {
-    root.querySelectorAll('.newsletter-slot input[name="email_address"]').forEach(function (input) {
-      input.placeholder = placeholder;
-      input.setAttribute("aria-label", placeholder);
+    root.querySelectorAll('.newsletter-slot input[type="email"], .newsletter-slot input[name="email"]').forEach(function (input) {
+      input.placeholder = config.placeholder;
+      input.setAttribute("aria-label", config.placeholder);
       input.setAttribute("autocomplete", "email");
     });
   }

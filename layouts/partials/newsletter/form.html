@@ -2,9 +2,7 @@
 {{- $variant := .variant | default "article" -}}
 {{- $isUkrainian := eq $context.Lang "uk" -}}
 {{- $isRussian := eq $context.Lang "ru" -}}
-{{- $uid := cond $isUkrainian "38804f916d" "f2105ba1ba" -}}
-{{- $formURL := printf "https://https-www-aicaver-com.kit.com/%s" $uid -}}
-{{- $scriptURL := printf "%s/index.js" $formURL -}}
+{{- $formID := cond $isUkrainian "x9iEO0" (cond $isRussian "704xqP" "w3V58o") -}}
 {{- $subscribeLabel := cond $isUkrainian "Підписатися" (cond $isRussian "Подписаться" "Subscribe") -}}
 {{- $subscribeTitle := cond $isUkrainian "Підписатися на розсилку AI Caver" (cond $isRussian "Подписаться на рассылку AI Caver" "Subscribe to the AI Caver newsletter") -}}
 {{- $subscribePage := "subscribe/" | relLangURL -}}
@@ -12,13 +10,13 @@
 <div class="newsletter-slot newsletter-slot--{{ $variant }}"{{ with .id }} id="{{ . }}"{{ end }}>
     {{- if eq $variant "desktop" -}}
         <div class="newsletter-slot__embed">
-            <script async data-uid="{{ $uid }}" src="{{ $scriptURL }}"></script>
+            <div class="ml-embedded" data-form="{{ $formID }}"></div>
         </div>
         <a class="newsletter-slot__cta" href="{{ $subscribePage }}" title="{{ $subscribeTitle }}">
             <i class="far fa-envelope fa-fw" aria-hidden="true"></i>{{ $subscribeLabel }}
         </a>
     {{- else -}}
-        <script async data-uid="{{ $uid }}" src="{{ $scriptURL }}"></script>
+        <div class="ml-embedded" data-form="{{ $formID }}"></div>
     {{- end -}}
-    <noscript><a href="{{ $formURL }}">{{ $subscribeLabel }}</a></noscript>
+    <noscript><a href="{{ $subscribePage }}">{{ $subscribeLabel }}</a></noscript>
 </div>

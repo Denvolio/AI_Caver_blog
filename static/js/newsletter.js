@@ -53,13 +53,14 @@
   }
 
   function localizeEmailFields(root) {
-    const prefilledEmail = new URLSearchParams(window.location.search).get("email");
+    const prefilledEmail = new URLSearchParams(window.location.search).get("email") || sessionStorage.getItem("aicaver_pending_email");
     root.querySelectorAll('.newsletter-slot input[type="email"], .newsletter-slot input[name="email"]').forEach(function (input) {
       input.placeholder = config.placeholder;
       input.setAttribute("aria-label", config.placeholder);
       input.setAttribute("autocomplete", "email");
       if (prefilledEmail && input.closest(".newsletter-slot--standalone") && !input.value) {
         input.value = prefilledEmail;
+        sessionStorage.removeItem("aicaver_pending_email");
       }
     });
     root.querySelectorAll(".newsletter-slot .ml-form-embedSubmit button").forEach(function (button) {
@@ -67,7 +68,19 @@
     });
   }
 
+  function rememberQuickEmail() {
+    document.querySelectorAll(".newsletter-slot__quick-form").forEach(function (form) {
+      form.addEventListener("submit", function () {
+        const input = form.querySelector('input[type="email"]');
+        if (input && input.value) {
+          sessionStorage.setItem("aicaver_pending_email", input.value);
+        }
+      });
+    });
+  }
+
   insertSlots();
+  rememberQuickEmail();
   localizeEmailFields(document);
 
   const observer = new MutationObserver(function (mutations) {

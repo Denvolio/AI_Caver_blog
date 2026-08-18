@@ -112,8 +112,8 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-    min-height: 28rem;
-    padding: 2.75rem 0 2rem;
+    min-height: 0;
+    padding: .8rem 0 .5rem;
     text-align: left;
   }
 
@@ -168,10 +168,10 @@
   .aicaver-desktop-hero .ml-form-embedContent .ml-form-embedSubmit button { min-height: 2.8rem !important; }
   .aicaver-desktop-hero__art {
     align-items: center;
-    aspect-ratio: .82 / 1;
+    aspect-ratio: .88 / 1;
     display: flex;
     justify-content: center;
-    min-height: 36rem;
+    min-height: 28rem;
     position: relative;
     width: 100%;
   }

@@ -1,0 +1,74 @@
+{{- $profile := .Site.Params.home.profile -}}
+
+{{/* Keep the LoveIt profile markup intact for phones and small tablets. */}}
+<div class="home-profile home-profile--mobile">
+    {{- $avatar := $profile.avatarURL -}}
+    {{- with $profile.gravatarEmail -}}
+        {{- $avatar = md5 . | printf "https://www.gravatar.com/avatar/%v?s=240&d=mp" -}}
+    {{- end -}}
+    {{- if $avatar -}}
+        <div class="home-avatar">
+            {{- $menus := $.Site.Menus.main | default slice -}}
+            {{- with index $menus 0 -}}
+                {{- $url := .URL | relLangURL -}}
+                {{- with .Page -}}
+                    {{- $url = .RelPermalink -}}
+                {{- end -}}
+                <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    {{- dict "Src" $avatar | partial "plugin/img.html" -}}
+                </a>
+            {{- else -}}
+                {{- dict "Src" $avatar | partial "plugin/img.html" -}}
+            {{- end -}}
+        </div>
+    {{- end -}}
+    {{- with $profile.title -}}<h1 class="home-title">{{ . | safeHTML }}</h1>{{- end -}}
+    {{- with $profile.subtitle -}}<div class="home-subtitle">{{ . | safeHTML }}</div>{{- end -}}
+    {{- if $profile.social -}}
+        <div class="links">
+            {{- $socialMap := resources.Get "data/social.yml" | transform.Unmarshal -}}
+            {{- range $key, $value := .Site.Params.social -}}
+                {{- $social := $key | lower | index $socialMap | default dict -}}
+                {{- if $value -}}
+                    {{- if reflect.IsMap $value -}}
+                        {{- with $value.weight }}{{ $social = dict "Weight" . | merge $social }}{{ end -}}
+                        {{- with $value.url }}{{ $social = dict "Url" . | merge $social }}{{ end -}}
+                    {{- else if ne $value true -}}{{ $social = dict "Id" $value | merge $social }}{{ end -}}
+                    {{- partial "plugin/social.html" $social -}}
+                {{- end -}}
+            {{- end -}}
+        </div>
+    {{- end -}}
+</div>
+
+{{/* Desktop-only hero. The mobile profile above remains the current mobile experience. */}}
+<section class="aicaver-desktop-hero" aria-labelledby="aicaver-desktop-title">
+    <div class="aicaver-desktop-hero__copy">
+        <p class="aicaver-desktop-hero__eyebrow">AI Caver</p>
+        <h1 id="aicaver-desktop-title">AI Caver</h1>
+        <p class="aicaver-desktop-hero__subtitle">Exploring how AI reshapes work, health, finance, and everyday life.</p>
+        <p class="aicaver-desktop-hero__description">Independent essays, experiments, and investigations into the real impact of AI beyond the hype.</p>
+
+        <nav class="aicaver-desktop-hero__socials" aria-label="AI Caver on social media">
+            <a href="https://x.com/aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/aicaver/" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="{{ "index.xml" | relLangURL }}" aria-label="AI Caver RSS feed"><i class="fas fa-rss" aria-hidden="true"></i></a>
+        </nav>
+
+        <div class="aicaver-desktop-hero__subscribe">
+            <p class="aicaver-desktop-hero__subscribe-title">Get AI Caver in your inbox</p>
+            {{ partial "newsletter/form.html" (dict "context" . "variant" "desktop" "id" "aicaver-desktop-newsletter") }}
+            <p class="aicaver-desktop-hero__fineprint">No spam. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <div class="aicaver-desktop-hero__art" aria-hidden="true">
+        <div class="aicaver-desktop-hero__glow"></div>
+        <div class="aicaver-desktop-hero__art-frame">
+            <img src="{{ "/uploads/ai-caver-avatar.png" | relURL }}" alt="" loading="eager" decoding="async">
+        </div>
+        <span class="aicaver-desktop-hero__orbit aicaver-desktop-hero__orbit--one"></span>
+        <span class="aicaver-desktop-hero__orbit aicaver-desktop-hero__orbit--two"></span>
+    </div>
+</section>

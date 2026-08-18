@@ -91,26 +91,10 @@
   }
 
   .aicaver-desktop-hero__copy { max-width: 39rem; }
-  .aicaver-desktop-hero__eyebrow {
-    color: $global-font-secondary-color;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: .18em;
-    margin: 0 0 .75rem;
-    text-transform: uppercase;
-  }
-  .aicaver-desktop-hero h1 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(4rem, 6.4vw, 6.8rem);
-    font-weight: 500;
-    letter-spacing: -.075em;
-    line-height: .9;
-    margin: 0 0 1.25rem;
-  }
   .aicaver-desktop-hero__subtitle {
-    font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+    font-size: clamp(1rem, 1.35vw, 1.3rem);
     line-height: 1.45;
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     max-width: 31rem;
   }
   .aicaver-desktop-hero__description {
@@ -167,25 +151,20 @@
     position: relative;
   }
   .aicaver-desktop-hero__art-frame {
-    border-radius: 48% 52% 52% 48% / 20% 25% 75% 80%;
-    box-shadow: 0 2rem 5rem rgba(24, 27, 71, .28);
-    height: 25rem;
-    max-width: 23rem;
-    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+    overflow: visible;
     position: relative;
-    transform: rotate(2deg);
-    width: 76%;
+    width: 100%;
     z-index: 1;
   }
   .aicaver-desktop-hero__art img {
-    height: 150%;
-    max-width: none;
-    object-fit: cover;
-    object-position: center top;
-    position: absolute;
-    right: -3%;
-    top: -3%;
-    width: 112%;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    position: relative;
+    width: 100%;
   }
   .aicaver-desktop-hero__glow {
     background: radial-gradient(circle, rgba(38, 166, 204, .38), transparent 68%);
@@ -206,6 +185,5 @@
   .aicaver-desktop-hero__orbit--two { height: 105%; transform: rotate(42deg); width: 72%; }
   [theme=dark] .aicaver-desktop-hero__socials a { border-color: $global-border-color-dark; }
   [theme=dark] .aicaver-desktop-hero__description,
-  [theme=dark] .aicaver-desktop-hero__eyebrow,
   [theme=dark] .aicaver-desktop-hero__fineprint { color: $global-font-secondary-color-dark; }
 }

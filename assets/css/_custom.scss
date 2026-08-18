@@ -145,13 +145,17 @@
   .aicaver-desktop-hero .ml-form-embedContent .ml-form-embedSubmit button { min-height: 2.8rem !important; }
   .aicaver-desktop-hero__art {
     align-items: center;
+    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
-    min-height: 28rem;
+    min-height: 0;
     position: relative;
+    width: 100%;
   }
   .aicaver-desktop-hero__art-frame {
-    height: auto;
+    align-items: center;
+    display: flex;
+    height: 100%;
     max-width: 100%;
     overflow: visible;
     position: relative;
@@ -160,7 +164,7 @@
   }
   .aicaver-desktop-hero__art img {
     display: block;
-    height: auto;
+    height: 100%;
     max-width: 100%;
     object-fit: contain;
     position: relative;

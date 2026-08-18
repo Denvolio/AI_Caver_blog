@@ -166,23 +166,6 @@
     position: relative;
     width: 100%;
   }
-  .aicaver-desktop-hero__glow {
-    background: radial-gradient(circle, rgba(38, 166, 204, .38), transparent 68%);
-    border-radius: 50%;
-    filter: blur(10px);
-    height: 105%;
-    position: absolute;
-    width: 105%;
-  }
-  .aicaver-desktop-hero__orbit {
-    border: 1px solid rgba(38, 166, 204, .42);
-    border-radius: 50%;
-    height: 82%;
-    position: absolute;
-    transform: rotate(-28deg);
-    width: 108%;
-  }
-  .aicaver-desktop-hero__orbit--two { height: 105%; transform: rotate(42deg); width: 72%; }
   [theme=dark] .aicaver-desktop-hero__socials a { border-color: $global-border-color-dark; }
   [theme=dark] .aicaver-desktop-hero__description,
   [theme=dark] .aicaver-desktop-hero__fineprint { color: $global-font-secondary-color-dark; }

@@ -1,17 +1,43 @@
-// AI Caver newsletter forms (Kit)
+// AI Caver newsletter forms (MailerLite)
 .newsletter-slot {
   line-height: normal;
 
-  .formkit-form {
+  .ml-form-embedContainer,
+  .ml-form-embedWrapper,
+  .ml-form-embedBody,
+  .ml-form-successBody {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .ml-form-embedContainer { min-height: 0 !important; }
+
+  .ml-form-formContent,
+  .ml-form-successContent {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  form {
     box-shadow: none !important;
     margin: 0 !important;
     max-width: none !important;
     width: 100% !important;
   }
 
-  .formkit-form > [data-style] { padding: 0 !important; }
-  .formkit-alert { margin: .5rem 0 0 !important; }
-  .formkit-powered-by-convertkit-container { opacity: .58; }
+  .ml-form-formContent h4,
+  .ml-form-successContent h4,
+  .ml-form-formContent p,
+  .ml-form-successContent p { margin-top: 0 !important; }
+
+  .ml-form-embedSubmit { margin-top: .75rem !important; }
+  .ml-form-embedSubmit button { border-radius: .35rem !important; }
+  .ml-error { margin: .5rem 0 0 !important; }
 }
 
 .newsletter-menu-link i { margin-right: .25rem; }
@@ -26,20 +52,17 @@
   padding: 1.25rem 1.4rem;
 
   [theme=dark] & { background: #232d33; border-color: rgba(85, 189, 226, .28); }
-  .formkit-form { background: transparent !important; min-width: 0 !important; padding: 0 !important; }
-  .formkit-background { display: none !important; }
-  .formkit-header,
-  .formkit-subheader,
-  .formkit-guarantee { margin: 0 !important; }
-  [data-element="fields"] { display: flex !important; gap: .5rem !important; margin: 0 !important; }
-  .formkit-field { flex: 1 1 auto !important; min-width: 0 !important; }
-  .formkit-input,
-  .formkit-submit { margin: 0 !important; }
-  .formkit-submit { flex: 0 0 auto !important; height: 47px !important; width: auto !important; }
-  .formkit-header h2 { font-size: 1.2rem !important; margin: 0 0 .3rem !important; }
-  .formkit-subheader p { font-size: .9rem !important; line-height: 1.35rem !important; margin: 0 0 .8rem !important; }
-  .formkit-guarantee p,
-  .formkit-powered-by-convertkit-container { font-size: .7rem !important; line-height: 1rem !important; margin: .4rem 0 0 !important; }
+  .ml-form-embedWrapper { padding: 0 !important; }
+  .ml-form-embedContent h4 { font-size: 1.2rem !important; margin: 0 0 .3rem !important; }
+  .ml-form-embedContent p { font-size: .9rem !important; line-height: 1.35rem !important; margin: 0 0 .8rem !important; }
+  .ml-form-embedContent input,
+  .ml-form-embedContent button { border-radius: .35rem !important; }
+  .ml-form-embedContent button { background: #1677be !important; }
+  .ml-form-embedContent button:hover { background: #0f5f9a !important; }
+  .ml-form-embedContent .ml-form-embedSubmit { margin: 0 !important; }
+  .ml-form-embedContent .ml-form-embedSubmit button { height: 47px !important; }
+  .ml-form-embedContent .ml-form-checkboxRow,
+  .ml-form-embedContent .ml-form-checkboxRow p { font-size: .75rem !important; line-height: 1.1rem !important; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -47,6 +70,6 @@
   .newsletter-slot--standalone {
     padding: 1rem;
     [data-element="fields"] { display: block !important; }
-    .formkit-submit { margin-top: .45rem !important; width: 100% !important; }
+    .ml-form-embedSubmit button { margin-top: .45rem !important; width: 100% !important; }
   }
 }

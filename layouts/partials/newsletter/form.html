@@ -4,17 +4,17 @@
 {{- $isRussian := eq $context.Lang "ru" -}}
 {{- $formID := cond $isUkrainian "x9iEO0" (cond $isRussian "704xqP" "w3V58o") -}}
 {{- $subscribeLabel := cond $isUkrainian "Підписатися" (cond $isRussian "Подписаться" "Subscribe") -}}
+{{- $emailPlaceholder := cond $isUkrainian "Ваш email" (cond $isRussian "Ваш email" "Your email") -}}
 {{- $subscribeTitle := cond $isUkrainian "Підписатися на розсилку AI Caver" (cond $isRussian "Подписаться на рассылку AI Caver" "Subscribe to the AI Caver newsletter") -}}
 {{- $subscribePage := "subscribe/" | relLangURL -}}
 
 <div class="newsletter-slot newsletter-slot--{{ $variant }}"{{ with .id }} id="{{ . }}"{{ end }}>
     {{- if eq $variant "desktop" -}}
-        <div class="newsletter-slot__embed">
-            <div class="ml-embedded" data-form="{{ $formID }}"></div>
-        </div>
-        <a class="newsletter-slot__cta" href="{{ $subscribePage }}" title="{{ $subscribeTitle }}">
-            <i class="far fa-envelope fa-fw" aria-hidden="true"></i>{{ $subscribeLabel }}
-        </a>
+        <form class="newsletter-slot__quick-form" action="{{ $subscribePage }}" method="get">
+            <label class="sr-only" for="{{ .id }}-email">{{ $emailPlaceholder }}</label>
+            <input id="{{ .id }}-email" name="email" type="email" autocomplete="email" required placeholder="{{ $emailPlaceholder }}">
+            <button type="submit">{{ $subscribeLabel }}</button>
+        </form>
     {{- else -}}
         <div class="ml-embedded" data-form="{{ $formID }}"></div>
     {{- end -}}

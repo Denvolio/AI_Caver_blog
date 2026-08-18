@@ -40,6 +40,33 @@
   .ml-error { margin: .5rem 0 0 !important; }
 }
 
+.newsletter-slot__quick-form {
+  display: grid;
+  gap: .75rem;
+  margin: 0;
+  width: 100%;
+
+  input,
+  button {
+    border-radius: .35rem;
+    box-sizing: border-box;
+    font: inherit;
+    min-height: 2.8rem;
+    width: 100%;
+  }
+
+  input { border: 1px solid $global-border-color; padding: .65rem .8rem; }
+  button {
+    background: #000;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .65rem .8rem;
+  }
+  button:hover { opacity: .85; }
+}
+
 .newsletter-menu-link i { margin-right: .25rem; }
 
 .newsletter-slot--article,
@@ -133,7 +160,6 @@
     margin: 0;
     padding: 0;
   }
-  .aicaver-desktop-hero .newsletter-slot__cta { display: none; }
   .aicaver-desktop-hero .ml-form-embedContent h4,
   .aicaver-desktop-hero .ml-form-embedContent > p { display: none !important; }
   .aicaver-desktop-hero .ml-form-embedContent .ml-form-checkboxRow,

@@ -5,10 +5,10 @@
   const isUkrainian = language.startsWith("uk");
   const isRussian = language.startsWith("ru");
   const config = isUkrainian
-    ? { formId: "x9iEO0", placeholder: "Ваш email", subscribeLabel: "Підписатися", subscribeTitle: "Підписатися на розсилку AI Caver", subscribeUrl: "/uk/subscribe/" }
+    ? { formId: "x9iEO0", placeholder: "Ваш email", submitLabel: "Підписатися", subscribeLabel: "Підписатися", subscribeTitle: "Підписатися на розсилку AI Caver", subscribeUrl: "/uk/subscribe/" }
     : isRussian
-      ? { formId: "704xqP", placeholder: "Ваш email", subscribeLabel: "Подписаться", subscribeTitle: "Подписаться на рассылку AI Caver", subscribeUrl: "/ru/subscribe/" }
-      : { formId: "w3V58o", placeholder: "Your email", subscribeLabel: "Subscribe", subscribeTitle: "Subscribe to the AI Caver newsletter", subscribeUrl: "/subscribe/" };
+      ? { formId: "704xqP", placeholder: "Ваш email", submitLabel: "Подписаться", subscribeLabel: "Подписаться", subscribeTitle: "Подписаться на рассылку AI Caver", subscribeUrl: "/ru/subscribe/" }
+      : { formId: "w3V58o", placeholder: "Your email", submitLabel: "Subscribe", subscribeLabel: "Subscribe", subscribeTitle: "Subscribe to the AI Caver newsletter", subscribeUrl: "/subscribe/" };
 
   function createSlot(variant) {
     const slot = document.createElement("div");
@@ -57,6 +57,9 @@
       input.placeholder = config.placeholder;
       input.setAttribute("aria-label", config.placeholder);
       input.setAttribute("autocomplete", "email");
+    });
+    root.querySelectorAll(".newsletter-slot .ml-form-embedSubmit button").forEach(function (button) {
+      button.textContent = config.submitLabel;
     });
   }
 

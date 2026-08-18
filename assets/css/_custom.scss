@@ -92,15 +92,10 @@
 
   .aicaver-desktop-hero__copy { max-width: 39rem; }
   .aicaver-desktop-hero__subtitle {
-    font-size: clamp(1rem, 1.35vw, 1.3rem);
-    line-height: 1.45;
-    margin: 0 0 1rem;
-    max-width: 31rem;
-  }
-  .aicaver-desktop-hero__description {
-    color: $global-font-secondary-color;
-    font-size: 1rem;
-    line-height: 1.75;
+    color: $global-font-color;
+    font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.55;
     margin: 0;
     max-width: 34rem;
   }
@@ -145,10 +140,10 @@
   .aicaver-desktop-hero .ml-form-embedContent .ml-form-embedSubmit button { min-height: 2.8rem !important; }
   .aicaver-desktop-hero__art {
     align-items: center;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: .9 / 1;
     display: flex;
     justify-content: center;
-    min-height: 0;
+    min-height: 32rem;
     position: relative;
     width: 100%;
   }
@@ -171,6 +166,6 @@
     width: 100%;
   }
   [theme=dark] .aicaver-desktop-hero__socials a { border-color: $global-border-color-dark; }
-  [theme=dark] .aicaver-desktop-hero__description,
+  [theme=dark] .aicaver-desktop-hero__subtitle,
   [theme=dark] .aicaver-desktop-hero__fineprint { color: $global-font-secondary-color-dark; }
 }

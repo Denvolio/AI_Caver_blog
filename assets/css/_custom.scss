@@ -1,3 +1,9 @@
+// Header robot mark: use the black artwork on light backgrounds and the white
+// artwork when LoveIt switches the page to its dark theme.
+header .logo--dark { display: none; }
+[theme=dark] header .logo--light { display: none; }
+[theme=dark] header .logo--dark { display: inline-block; }
+
 // AI Caver newsletter forms (MailerLite)
 .newsletter-slot {
   line-height: normal;

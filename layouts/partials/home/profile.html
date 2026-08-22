@@ -44,18 +44,19 @@
 {{/* Desktop-only hero. The mobile profile above remains the current mobile experience. */}}
 {{- $isUkrainian := eq .Lang "uk" -}}
 {{- $isRussian := eq .Lang "ru" -}}
-{{- $heroText := cond $isUkrainian "Досліджуємо, як ШІ змінює роботу, здоров’я, фінанси та повсякденне життя." (cond $isRussian "Исследуем, как ИИ меняет работу, здоровье, финансы и повседневную жизнь." "Exploring how AI reshapes work, health, finance, and everyday life.") -}}
+{{- $heroText := cond $isUkrainian "Глибше досліджуємо, як ШІ змінює роботу, гроші, здоров’я та повсякденне життя." (cond $isRussian "Глубже исследуем, как ИИ меняет работу, деньги, здоровье и повседневную жизнь." "Going deeper into how AI is changing work, money, health and everyday life.") -}}
+{{- $socialLabel := cond $isUkrainian "Стежте за AI Caver" (cond $isRussian "Следите за AI Caver" "Follow AI Caver") -}}
 {{- $subscribeTitle := cond $isUkrainian "Отримуйте AI Caver на пошту" (cond $isRussian "Получайте AI Caver на почту" "Get AI Caver in your inbox") -}}
 {{- $fineprint := cond $isUkrainian "Без спаму. Відписатися можна будь-коли." (cond $isRussian "Без спама. Отписаться можно в любое время." "No spam. Unsubscribe anytime.") -}}
 <section class="aicaver-desktop-hero" aria-labelledby="aicaver-desktop-title">
     <div class="aicaver-desktop-hero__copy">
         <p id="aicaver-desktop-title" class="aicaver-desktop-hero__subtitle">{{ $heroText }}</p>
 
+        <p class="aicaver-desktop-hero__social-label">{{ $socialLabel }}</p>
         <nav class="aicaver-desktop-hero__socials" aria-label="AI Caver on social media">
-            <a href="https://x.com/aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/company/aicaver/" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/@aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-            <a href="{{ "index.xml" | relLangURL }}" aria-label="AI Caver RSS feed"><i class="fas fa-rss" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/aicavercom/" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@aicaver-blog" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
         </nav>
 
         <div class="aicaver-desktop-hero__subscribe">

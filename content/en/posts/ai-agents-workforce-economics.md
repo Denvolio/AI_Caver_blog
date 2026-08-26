@@ -3,8 +3,8 @@ title: "The Digital Employee Is Already at Work. Now We're Trying to Figure Out 
 seoTitle: "The Economics of AI Agents: Who Pays for Digital Labor?"
 date: 2026-08-26
 slug: "ai-agents-workforce-economics"
-featuredImage: "/uploads/ai-agents-workforce-economics-hero.png"
-images: ["/uploads/ai-agents-workforce-economics-hero.png", "/uploads/ai-agents-workforce-pressure.png", "/uploads/ai-agents-workforce-transition.png", "/uploads/ai-agents-digital-workforce.png"]
+featuredImage: "/uploads/ai-agents-workforce-hero.png"
+images: ["/uploads/ai-agents-workforce-hero.png", "/uploads/ai-agents-physical-vs-digital-work.png", "/uploads/ai-agents-employee-ai-team.png", "/uploads/ai-agents-digital-labor-costs.png"]
 translationKey: "ai-agents-workforce-economics"
 draft: false
 tags: ["AI agents", "AI economics", "future of work", "automation", "labor market"]
@@ -131,8 +131,6 @@ capabilities as one factor behind the decision. But macroeconomic
 research still does not show a world in which millions of white-collar
 workers are disappearing from the labor market all at once.
 
-![AI agents taking over a modern workforce](/uploads/ai-agents-workforce-pressure.png)
-
 The more interesting channel works differently. The company fires
 nobody. It simply does not hire the next person.
 
@@ -179,6 +177,9 @@ Entry-level work usually contains a lot of relatively structured tasks:
 initial research, data processing, first drafts, routine code, document
 checks, CRM updates, simple reports. This is exactly the layer of work
 that generative AI has learned to absorb fastest.
+
+![Two worlds of work: road construction outside and AI employees inside](/uploads/ai-agents-physical-vs-digital-work.png)
+*AI was supposed to take the hard jobs first. Instead, it learned office work surprisingly fast.*
 
 And here we get a fairly nasty paradox.
 
@@ -240,8 +241,6 @@ high-margin.
 In a real company, there is one more step between "the agent did the
 work" and "the work is done."
 
-![The transition from manual work to AI-assisted work](/uploads/ai-agents-workforce-transition.png)
-
 Someone has to look at what it actually did.
 
 In one banking-app modernization case described by McKinsey, developers
@@ -252,6 +251,9 @@ upward: planning, coordination, review, testing, and decision-making.
 
 From the outside, this looks like an extraordinary productivity boost.
 One developer gets a small digital team.
+
+![An employee overwhelmed by four AI teammates](/uploads/ai-agents-employee-ai-team.png)
+*One person can now manage a digital team. That doesn't necessarily mean less work.*
 
 But machine output and human attention do not scale at the same speed.
 If twenty agents can produce work at the same time, they can also
@@ -421,8 +423,6 @@ An agent asks for none of that.
 
 It does, however, come with a kind of corporate credit card.
 
-![The digital workforce and its corporate costs](/uploads/ai-agents-digital-workforce.png)
-
 One of the most interesting academic papers of 2026, *How Do AI Agents
 Spend Your Money?*, shows how quickly costs get strange once a model
 stops answering a single question and starts carrying out a long task on
@@ -443,6 +443,9 @@ thinks again, reads something else, tries an action, gets an error,
 fixes it, runs a test, and continues. As it moves forward, it drags a
 growing history of previous steps behind it. The context grows like a
 snowball, except someone pays for every new layer.
+
+![Managers review the rising cost of AI agents](/uploads/ai-agents-digital-labor-costs.png)
+*Digital workers don't need salaries or vacations. But they still send a bill.*
 
 The spread is even more interesting. In the same study, repeated runs of
 the exact same task could differ in token use by as much as 30 times in

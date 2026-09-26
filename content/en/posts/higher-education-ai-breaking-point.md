@@ -1,6 +1,6 @@
 ---
 title: "The Breaking Point for Higher Education: Student Work Is Getting Better. The Learning Is Not."
-seoTitle: "How AI Is Breaking Higher Education Assessment"
+seoTitle: "AI in Higher Education: Better Work, But Better Learning?"
 date: 2026-08-09T00:30:00+02:00
 slug: "higher-education-ai-breaking-point"
 featuredImage: "/uploads/hero-higher-education-ai-breaking-point.jpg"
@@ -10,26 +10,18 @@ draft: false
 tags: ["AI in education", "higher education", "assessment", "AI tutors", "learning"]
 categories: ["Education & AI"]
 author: "Denys Voroshylov"
-description: "Generative AI improves essays, code, and grades faster than universities can determine what student work still proves."
+description: "AI improves essays, code and grades—but not always learning. Evidence from 211 students, QUT and Sydney shows how universities can verify real competence."
 ---
 
-*Generative AI improves essays, code, and grades faster than universities can work out what a piece of student work now proves — and what stays with its author once the laptop closes.*
+Generative AI is making student work look better faster than universities can decide what that work still proves.
 
-Picture two students handed the same assignment. Both are bright, both are motivated, both want the top grade — and from there their paths split.
+Two students can submit equally convincing papers. One used AI to challenge her reasoning and improve a draft she largely built herself. The other delegated the structure, argument and language to a model, then handed in the polished result. The university sees the same product—but not the difference in learning behind it.
 
-The first loves the subject. She reads the sources, spends a long time building her argument, writes a messy draft, and only then opens ChatGPT — not to replace her thinking but to stress-test it. She asks the model to find the weak spots, raise objections, point to the gaps in her logic, and then she goes back and rewrites the thing herself.
+That is the real assessment problem in the AI era. It is not simply whether students used ChatGPT. It is whether an essay, a piece of code or a high grade still provides reliable evidence of authorship, understanding, retention and the ability to transfer knowledge to a new situation.
 
-The second student loves the result more than the subject. Study is a means to an end, so he feeds the model the prompt, the grading rubric, and the material he's gathered, gets back a strong structure, checks the sources, tightens the phrasing, and hands in a nearly flawless paper.
+### The short answer
 
-Both papers can earn the top grade. And that is where the problem begins.
-
-The university sees two equally convincing products, and almost none of the process that produced them. One student stretched her own thinking; the other, to put it plainly, borrowed his for the week. On paper their competence looks comparable, even though beyond the text the difference may be enormous.
-
-I look at this from several angles at once. As someone who works in marketing and communications, I already see every day how useful AI can be: I use it, I study what it can do, and I have no intention of pretending the technology can be canceled by administrative decree. But a background in journalism trained me to separate an impressive result from proof, and a convenient explanation from a fact.
-
-There's another reason the question won't leave me alone. I have two children. My older daughter faces a serious educational choice in about five years. My younger son will enter the system much later — but already in a world where AI is an ordinary part of school. What should they learn, how should they learn it, and what will a university degree even certify by then?
-
-Not long ago questions like these sounded like futurology. Now they walk into the house with a child who opens a laptop and sits down to do homework.
+AI has not made assessment impossible, but it has made the finished product a weaker piece of evidence. Research increasingly shows that students can produce better essays, code and grades without gaining the same amount of durable understanding. In one experiment involving 211 students, the benefit of AI lasted mainly when students used it to question and develop their own thinking; it faded when they delegated the work to the model. Universities therefore need more than AI detectors or blanket bans. The stronger direction is a two-part system: open work with AI for realistic learning and professional practice, combined with selected secured checks that test explanation, retention, transfer or observed performance.
 
 On August 6, 2026, Denmark offered one of the first policy-level answers. The Ministry of Education [announced](https://uvm.dk/aktuelt/nyheder/2026/august/260806-ny-strakspakke-mod-ai-snyd-paa-gymnasierne/) that major examination papers prepared at home will have to be defended out loud. The first group named directly was the roughly 9,000 students in the HF program — a two-year upper-secondary track that qualifies graduates for university — who each year write a large individual final assignment, the SSO.
 

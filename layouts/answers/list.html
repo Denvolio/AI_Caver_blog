@@ -1,0 +1,17 @@
+{{- define "title" }}{{ .Title }} | AI Caver{{ end -}}
+
+{{- define "content" -}}
+    <div class="page answers-index">
+        <h1 class="single-title">{{ .Title }}</h1>
+        <p class="answers-deck">{{ .Description }}</p>
+        <div class="answers-list">
+            {{- range .RegularPages.ByDate.Reverse -}}
+                <article class="answers-card">
+                    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    <p>{{ .Description }}</p>
+                    <time datetime="{{ .Lastmod.Format "2006-01-02" }}">Updated {{ .Lastmod.Format "January 2, 2006" }}</time>
+                </article>
+            {{- end -}}
+        </div>
+    </div>
+{{- end -}}

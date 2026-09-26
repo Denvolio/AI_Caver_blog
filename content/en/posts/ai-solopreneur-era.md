@@ -147,6 +147,8 @@ There is no team. **But the team’s work is still there.**
 
 ## Maybe We Are Asking the Wrong Question
 
+For the concise version, see: [Can one person run a company with AI?](/answers/can-one-person-run-a-company-with-ai/)
+
 Most conversations about AI entrepreneurship eventually reduce to some version of this: **Will AI increase the probability that a startup succeeds?**
 
 So far, I have not found convincing data that lets us confidently answer yes. If anything, the explosion in supply suggests that competing for attention may be getting harder.

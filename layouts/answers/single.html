@@ -1,0 +1,22 @@
+{{- define "title" }}{{ .Params.seoTitle | default .Title }} | AI Caver{{ end -}}
+
+{{- define "content" -}}
+    <article class="page single answers-page">
+        <nav class="answers-breadcrumbs" aria-label="Breadcrumb">
+            <a href="{{ "" | relURL }}">Home</a>
+            <span aria-hidden="true">→</span>
+            <a href="{{ "answers/" | relURL }}">Answers</a>
+            <span aria-hidden="true">→</span>
+            <span>{{ .Title }}</span>
+        </nav>
+        <h1 class="single-title">{{ .Title }}</h1>
+        <p class="answers-deck">{{ .Description }}</p>
+        <div class="answers-meta">
+            <time datetime="{{ .Lastmod.Format "2006-01-02" }}">Updated {{ .Lastmod.Format "January 2, 2006" }}</time>
+        </div>
+        <div class="content" id="content">
+            {{- $params := .Scratch.Get "params" -}}
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+    </article>
+{{- end -}}

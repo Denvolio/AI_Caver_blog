@@ -31,6 +31,8 @@ Denmark did not commit to a single clean philosophy, though. The same package fo
 
 The result is a telling hybrid: one hand reaches to see competence more clearly, the other to control the production of text more tightly. The international turn from hunting the AI to verifying the human has genuinely begun — but it looks neither uniform nor finished.
 
+For a concise answer to the learning question, see: [Does ChatGPT help students learn?](/answers/does-chatgpt-help-students-learn/)
+
 ## When the Work Improves but the Student Doesn't
 
 Universities are used to grading what they can see and compare: an essay, code, a report, a presentation, an exam answer. Generative AI is superb at improving exactly those outputs. The improvement is easy to see today; the learning shows up later and is far harder to measure.

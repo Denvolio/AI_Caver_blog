@@ -75,6 +75,26 @@ header .logo--dark { display: none; }
 
 .newsletter-menu-link i { margin-right: .25rem; }
 
+// Compact evidence-answer section.
+.answers-index,
+.answers-page { max-width: 52rem; margin-left: auto; margin-right: auto; }
+.answers-deck { color: $global-font-secondary-color; font-size: 1.05rem; line-height: 1.55; margin: .5rem 0 2rem; }
+.answers-list { border-top: 1px solid $global-border-color; }
+.answers-card { border-bottom: 1px solid $global-border-color; padding: 1.25rem 0; }
+.answers-card h2 { font-size: 1.35rem; margin: 0 0 .4rem; }
+.answers-card p { margin: 0 0 .5rem; }
+.answers-card time,
+.answers-meta { color: $global-font-secondary-color; font-size: .82rem; }
+.answers-breadcrumbs { color: $global-font-secondary-color; font-size: .82rem; margin-bottom: 1.5rem; }
+.answers-breadcrumbs span { margin: 0 .35rem; }
+.answers-page .content { font-size: 1rem; }
+[theme=dark] .answers-list,
+[theme=dark] .answers-card { border-color: $global-border-color-dark; }
+[theme=dark] .answers-deck,
+[theme=dark] .answers-card time,
+[theme=dark] .answers-meta,
+[theme=dark] .answers-breadcrumbs { color: $global-font-secondary-color-dark; }
+
 .newsletter-slot--article,
 .newsletter-slot--standalone {
   background: #f4f9fc;

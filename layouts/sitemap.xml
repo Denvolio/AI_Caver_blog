@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     {{- range .Data.Pages -}}
-        {{- if or .IsHome .IsPage (and .IsSection (eq .Section "posts")) -}}
+        {{- if or .IsHome .IsPage (and .IsSection (or (eq .Section "posts") (eq .Section "answers"))) -}}
             <url>
                 <loc>{{ .Permalink }}</loc>
                 {{- if not .Lastmod.IsZero }}

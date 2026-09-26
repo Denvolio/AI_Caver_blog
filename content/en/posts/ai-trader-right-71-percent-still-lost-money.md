@@ -62,6 +62,8 @@ Finally, there is the strictest level: a real account, a complete trading log, a
 
 ## How to be right and still lose
 
+For the short version, see: [Do AI trading bots actually work?](/answers/do-ai-trading-bots-actually-work/)
+
 Prediction Arena is especially valuable because it ended badly and the researchers did not hide the result. From January 12 to March 9, six models placed 2,916 trades on Kalshi. They could see bid and ask prices, contract rules, and the state of their portfolios, and they could search for additional information. Borrowed money was not allowed, and no more than 15% of the capital could be placed on a single event. The system accounted for fees and checked whether an agent had enough funds for each transaction.
 
 Put simply, the models were not allowed to walk into a casino and put everything on red. They were given perfectly reasonable guardrails. And they still lost.

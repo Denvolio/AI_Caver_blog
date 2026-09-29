@@ -54,6 +54,8 @@ For the worker, the difference between "it was the macro environment" and "it wa
 
 AI has given managers a new vocabulary for layoffs. "We overestimated demand and need to cut costs" and "We're becoming an AI-first company" can describe the exact same event. For the employee, the outcome is identical. For investors, it isn't: the first version sounds like a mistake, the second sounds like a strategy. This is how AI-washing emerges — when artificial intelligence becomes cover for ordinary cost-cutting. The problem is that from the outside, these two situations often look almost the same. A company cuts staff. The company talks about AI. The company talks about efficiency. It's easy for a journalist to write "company lays off workers due to AI" even when AI is just one of several factors, or simply a polished backdrop for an older story: growth is slowing and costs need to come down.
 
+For the narrower question of whether AI will replace entry-level jobs, see [Will AI Replace Entry-Level Jobs?](/answers/will-ai-replace-entry-level-jobs/).
+
 ![AI as a narrative for investors](/uploads/ai-layoffs-boardroom.png)
 
 ## Someone is winning from this
@@ -65,4 +67,3 @@ Nearly every conversation about AI and jobs focuses on losses. But there's anoth
 The worst advice you can give someone today is "just learn AI." It sounds right but means almost nothing. A more useful principle: value is shifting from executing simple tasks to being able to manage complex processes. Not just writing a text, but understanding what kind of text is needed, for whom, with what argument, and how to verify it doesn't read like hollow machine output. Not just writing code, but understanding the system, its constraints, its architecture, its edge cases, and what will happen six months after the merge. Not just producing a report, but knowing which metrics are misleading and where the model confidently made something up.
 
 AI performs well where the task is clear, repetitive, and sufficiently formalized. Humans become more valuable where the task is ambiguous, the stakes are high, context matters, and the cost of a mistake is significant. This isn't a call to flee digital professions — but a career built solely on executing basic tasks is no longer a safe bet. That used to be enough to get started. Now it may not be enough to get in the door at all.
-

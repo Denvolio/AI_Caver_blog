@@ -587,6 +587,8 @@ uncomfortable: **the market is already spending enormous amounts on a
 new form of labor, but it is still much better at measuring its activity
 than its economic result.**
 
+For a concise answer to whether AI agents really reduce costs, see [Do AI Agents Actually Save Money?](/answers/do-ai-agents-actually-save-money/).
+
 And this is not only a problem for buyers.
 
 Because there is another side that already seems to have become pretty

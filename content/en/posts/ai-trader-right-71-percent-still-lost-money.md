@@ -74,6 +74,8 @@ But the central lesson was hidden in Grok’s result. If the model correctly ide
 
 Imagine a contract that pays one dollar if an event occurs. If the market is already selling it for 95 cents and the model estimates the probability at 96%, the forecast may be highly accurate. But the potential profit is tiny, while one mistake can erase the gains from several correct bets. Add an oversized losing position, an early exit, and the spread between buying and selling prices, and high accuracy can coexist quite comfortably with a loss.
 
+For the broader question of whether AI trading bots can generate durable profits, see [Are AI Trading Bots Profitable?](/answers/are-ai-trading-bots-profitable/).
+
 In everyday life, we treat a correct answer as a victory. In trading, a correct answer is only raw material. You still have to buy it at the right price, size it correctly, and sell it at the right time. The models gathered information well and could explain their decisions convincingly, but they were poor at converting probability into capital.
 
 The confident reasoning looks especially uncomfortable next to a red account balance. A person sees a careful explanation, citations, and a calm tone and can almost physically feel that the decision has been checked. But articulate language does not reduce a position, close a loss, or refund a commission.

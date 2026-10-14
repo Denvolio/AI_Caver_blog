@@ -20,7 +20,7 @@ description: "AI already turns emails, voice notes, and bank transactions into e
 
 There is a school handout on the kitchen table: a field trip on Thursday, money due by Friday, a costume needed for a performance in two weeks. Until recently, someone had to read it, open the family calendar, manually create the events, remember to tell their partner, and then remember the shopping list all over again.
 
-Today, an app like [TimeTree](https://timetreeapp.com/intl/ja/newsroom/2024-07-03/schedule-scanning-update) can already extract several calendar events from a photo of that schedule. Similar shifts are happening across personal life. An email becomes a candidate for a meeting. A spoken thought becomes a task. A call transcript becomes a first draft of decisions. Thousands of lines in a bank statement become an answer to one useful question: “Why is there less money left this month?”
+Today, an app like **TimeTree** can already extract several calendar events from a photo of that schedule. Similar shifts are happening across personal life. An email becomes a candidate for a meeting. A spoken thought becomes a task. A call transcript becomes a first draft of decisions. Thousands of lines in a bank statement become an answer to one useful question: “Why is there less money left this month?”
 
 This is not a single sci-fi butler. It is a growing number of small handoffs that no longer require manual input. And that is already genuinely useful.
 
@@ -28,7 +28,7 @@ But personal life is not just a stream of objects waiting to be filed into apps.
 
 ## The calendar learned to rearrange time. It did not learn to understand life.
 
-The calendar is the most obvious place for a personal assistant to begin. It already has dates, meeting attendees, time zones, locations, and empty slots. [Gemini](https://support.google.com/gemini/answer/15305236?hl=en-GB&co=GENIE.Platform=Desktop) can create, find, and edit events, while dedicated schedulers such as [Motion](https://www.usemotion.com/help/time-management/auto-scheduling) and [Reclaim](https://help.reclaim.ai/en/articles/6207587-how-reclaim-manages-your-schedule-automatically) place tasks, habits, and focus time into available windows, then move them around when plans fall apart.
+The calendar is the most obvious place for a personal assistant to begin. It already has dates, meeting attendees, time zones, locations, and empty slots. **Gemini** can create, find, and edit events, while dedicated schedulers such as **Motion** and **Reclaim** place tasks, habits, and focus time into available windows, then move them around when plans fall apart.
 
 From an interface perspective, this is a meaningful step forward. Instead of filling out ten fields, you can say: “Schedule a meeting with Marina on Thursday afternoon, but no later than five.” Instead of dragging blocks across the week by hand, you get a proposed plan.
 
@@ -54,7 +54,7 @@ Task lists spent a long time being fairly dumb but honest systems. You wrote “
 
 AI is taking over that unpleasant first step.
 
-You can dictate, while walking somewhere, “I need to sort out my taxes.” You can forward an email. You can dump the stream of thoughts that tends to arrive ten minutes before sleep into an app. [Todoist Assist](https://www.todoist.com/todoist-assist) and [TickTick](https://help.ticktick.com/articles/7444677039392555008) can pull multiple tasks, dates, labels, and priorities from unstructured text or speech. AI can turn “I need to figure this out” into a list of possible next moves: collect documents, check the deadline, find access to the portal, ask the accountant, prepare a draft.
+You can dictate, while walking somewhere, “I need to sort out my taxes.” You can forward an email. You can dump the stream of thoughts that tends to arrive ten minutes before sleep into an app. **Todoist Assist** and **TickTick** can pull multiple tasks, dates, labels, and priorities from unstructured text or speech. AI can turn “I need to figure this out” into a list of possible next moves: collect documents, check the deadline, find access to the portal, ask the accountant, prepare a draft.
 
 The new task manager is becoming a compiler for intentions. It translates a vague human sentence into operational steps.
 
@@ -78,7 +78,7 @@ The gap becomes even sharper with money. There, mistakes are not measured in gui
 
 Personal finance makes it especially easy to confuse new technology with older automation that has simply been repainted in a fashionable color.
 
-Bank transaction imports, merchant recognition, automatic categorization, subscription detection, budget limits, and alerts all existed long before the current generative AI wave. Much of it is rules or machine learning gradually figuring out that this store usually means groceries and that this monthly amount means mobile service. [Copilot Money](https://help.copilot.money/en/articles/8182433-copilot-intelligence-for-spending), for instance, openly describes a categorization model that learns from user corrections.
+Bank transaction imports, merchant recognition, automatic categorization, subscription detection, budget limits, and alerts all existed long before the current generative AI wave. Much of it is rules or machine learning gradually figuring out that this store usually means groceries and that this monthly amount means mobile service. **Copilot Money**, for instance, openly describes a categorization model that learns from user corrections.
 
 And that is already useful. No one dreams of manually sorting through fifty bank transactions in the evening, especially when half the merchants in the statement have names that sound like companies from a bad spy movie.
 
@@ -86,7 +86,7 @@ Generative AI adds a different layer: it lets people ask questions of their data
 
 Why is cash flow worse this month than last month? How much did I spend on restaurants if we exclude vacation? Which recurring charges went up? Where did unusual spending appear? What explains the increase in household costs?
 
-Here, AI can be a good translator between a table and the question that actually matters to a person. It does not invent a new financial world. It shortens the distance between “I have thousands of transaction rows” and “Now I understand what changed.” [Monarch](https://help.monarchmoney.com/hc/en-us/articles/37526856682260-AI-in-Monarch) and other services are already experimenting with this analytical layer.
+Here, AI can be a good translator between a table and the question that actually matters to a person. It does not invent a new financial world. It shortens the distance between “I have thousands of transaction rows” and “Now I understand what changed.” **Monarch** and other services are already experimenting with this analytical layer.
 
 But the translator is not the person you hand the keys to your wallet.
 
@@ -112,7 +112,7 @@ Notes may be changing more than any other category, because AI removes several k
 
 Personal knowledge bases used to require an archivist’s discipline. You had to invent a folder, name the note, add tags, link it to other records, and then somehow remember what to search for two years later. Many personal databases became neatly organized digital graveyards. The information was carefully preserved. The problem was that no one could raise the right dead person.
 
-Now you can record a conversation, get a transcript, see a first draft of the summary, and ask the archive a question in ordinary language. Apple Notes can [record and transcribe audio](https://support.apple.com/guide/iphone/record-and-transcribe-audio-iphbe11247b5/ios). [Notion AI Meeting Notes](https://www.notion.com/releases/2025-05-13) produces a transcript and a meeting summary. Search in Notion increasingly tries to answer questions based on the contents of the workspace and connected sources, rather than simply returning ten blue links.
+Now you can record a conversation, get a transcript, see a first draft of the summary, and ask the archive a question in ordinary language. **Apple Notes** can record and transcribe audio. **Notion AI Meeting Notes** produces a transcript and a meeting summary. Search in Notion increasingly tries to answer questions based on the contents of the workspace and connected sources, rather than simply returning ten blue links.
 
 In this new flow, audio becomes text. Text becomes a draft conclusion. A meeting becomes decisions and an action list. A notes archive becomes someone you can ask: “Did we discuss this already? What did we decide then?”
 

@@ -124,6 +124,8 @@ Public memory overstates the scale of blanket bans. A [UNESCO survey](https://ww
 
 The institutions turned out to be not so much authoritarian as unprepared. And in that confusion, detectors looked like an almost perfect technical escape: if one machine made the text, maybe another could expose it.
 
+For a concise answer to what AI detectors can and cannot establish, see [Can Universities Detect AI-Written Work?](/answers/can-universities-detect-ai-written-work/).
+
 The hope met reality quickly. [Stanford researchers](https://hai.stanford.edu/news/ai-detectors-biased-against-non-native-english-writers) tested seven detectors on TOEFL essays written by humans who were not native English speakers. On average the systems wrongly flagged 61.22% of those papers as generated, and at least one detector suspected AI in 97% of the essays.
 
 This was not a mere technical glitch but a structural unfairness: predictable language became suspect, and international students were placed at disproportionate risk. At the same time the familiar arms race began. Models improved, paraphrasing tools multiplied, and telling human text from machine text with any confidence grew steadily harder.

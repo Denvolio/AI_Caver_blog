@@ -141,6 +141,8 @@ The third is much more interesting. The fourth, even more so.
 
 AI may let one person perform the work of five specialists. But the work of five specialists does not necessarily disappear. Sometimes, one very tired person simply ends up doing all of it.
 
+For a practical framework for choosing the first workflow to automate, see [What Should a Solopreneur Automate First With AI?](/answers/what-should-solopreneurs-automate-first/).
+
 The creator of HEXSTORM describes the launch week well: more than ten patches in the first three days, balancing against live users, dealing with refunds and negative reviews, sleeping three hours a night.
 
 There is no team. **But the team’s work is still there.**

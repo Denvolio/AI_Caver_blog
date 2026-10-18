@@ -1,0 +1,18 @@
+{{- /* English homepage only: compact clickable block linking to the AI Caver Answers hub. Placed between pagination and footer. */ -}}
+{{- with site.GetPage "/answers" -}}
+<div class="page aicaver-answers-cta-wrap">
+    <a class="aicaver-answers-cta" href="{{ .RelPermalink }}">
+        <span class="aicaver-answers-cta__art" aria-hidden="true">
+            <img src="{{ "/uploads/ai-caver-answers-banner.webp" | relURL }}"
+                 srcset="{{ "/uploads/ai-caver-answers-banner-720.webp" | relURL }} 720w, {{ "/uploads/ai-caver-answers-banner.webp" | relURL }} 1050w"
+                 sizes="(max-width: 680px) 100vw, 480px"
+                 width="1050" height="461" alt="" loading="lazy" decoding="async">
+        </span>
+        <span class="aicaver-answers-cta__copy">
+            <span class="aicaver-answers-cta__title">AI Caver Answers</span>
+            <span class="aicaver-answers-cta__text">Short, practical answers to the AI questions people are already asking.</span>
+            <span class="aicaver-answers-cta__button">Explore AI Caver Answers <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </span>
+    </a>
+</div>
+{{- end -}}

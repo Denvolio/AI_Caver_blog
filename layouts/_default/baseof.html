@@ -45,6 +45,7 @@
             <main class="main">
                 <div class="container">
                     {{- block "content" . }}{{ end -}}
+                    {{- if and .IsHome (eq .Lang "en") }}{{ partial "home/answers-cta.html" . }}{{ end -}}
                 </div>
             </main>
             {{- partial "footer.html" . -}}

@@ -1,52 +1,32 @@
 {{- $profile := .Site.Params.home.profile -}}
 
-{{/* Keep the LoveIt profile markup intact for phones and small tablets. */}}
-<div class="home-profile home-profile--mobile">
-    {{- $avatar := $profile.avatarURL -}}
-    {{- with $profile.gravatarEmail -}}
-        {{- $avatar = md5 . | printf "https://www.gravatar.com/avatar/%v?s=240&d=mp" -}}
-    {{- end -}}
-    {{- if $avatar -}}
-        <div class="home-avatar">
-            {{- $menus := $.Site.Menus.main | default slice -}}
-            {{- with index $menus 0 -}}
-                {{- $url := .URL | relLangURL -}}
-                {{- with .Page -}}
-                    {{- $url = .RelPermalink -}}
-                {{- end -}}
-                <a href="{{ $url }}"{{ with .Title | default .Name }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
-                    {{- dict "Src" $avatar | partial "plugin/img.html" -}}
-                </a>
-            {{- else -}}
-                {{- dict "Src" $avatar | partial "plugin/img.html" -}}
-            {{- end -}}
-        </div>
-    {{- end -}}
-    {{- with $profile.title -}}<h1 class="home-title">{{ . | safeHTML }}</h1>{{- end -}}
-    {{- with $profile.subtitle -}}<div class="home-subtitle">{{ . | safeHTML }}</div>{{- end -}}
-    {{- if $profile.social -}}
-        <div class="links">
-            {{- $socialMap := resources.Get "data/social.yml" | transform.Unmarshal -}}
-            {{- range $key, $value := .Site.Params.social -}}
-                {{- $social := $key | lower | index $socialMap | default dict -}}
-                {{- if $value -}}
-                    {{- if reflect.IsMap $value -}}
-                        {{- with $value.weight }}{{ $social = dict "Weight" . | merge $social }}{{ end -}}
-                        {{- with $value.url }}{{ $social = dict "Url" . | merge $social }}{{ end -}}
-                    {{- else if ne $value true -}}{{ $social = dict "Id" $value | merge $social }}{{ end -}}
-                    {{- partial "plugin/social.html" $social -}}
-                {{- end -}}
-            {{- end -}}
-        </div>
-    {{- end -}}
-</div>
-
-{{/* Desktop-only hero. The mobile profile above remains the current mobile experience. */}}
+{{/* Mobile hero: dark cave cover. Hidden on desktop (>=801px) by _custom.scss. */}}
 {{- $isUkrainian := eq .Lang "uk" -}}
 {{- $isRussian := eq .Lang "ru" -}}
 {{- $heroText := cond $isUkrainian "Глибше досліджуємо, як ШІ змінює роботу, гроші, здоров’я та повсякденне життя." (cond $isRussian "Глубже исследуем, как ИИ меняет работу, деньги, здоровье и повседневную жизнь." "Going deeper into how AI is changing work, money, health and everyday life.") -}}
-{{- $socialLabel := cond $isUkrainian "Стежте за AI Caver" (cond $isRussian "Следите за AI Caver" "Follow AI Caver") -}}
 {{- $subscribeTitle := cond $isUkrainian "Отримуйте AI Caver на пошту" (cond $isRussian "Получайте AI Caver на почту" "Get AI Caver in your inbox") -}}
+{{- $subscribeURL := "/subscribe/" | relLangURL -}}
+{{- with site.GetPage "/subscribe" }}{{ $subscribeURL = .RelPermalink }}{{ end -}}
+<section class="home-profile--mobile aicaver-mobile-hero">
+    <h1 class="aicaver-mobile-hero__sr">{{ $profile.title | default "AI Caver" }}</h1>
+    <div class="aicaver-mobile-hero__art" aria-hidden="true">
+        <img src="{{ "/uploads/ai-caver-mobile-hero-cave-780.webp" | relURL }}"
+             srcset="{{ "/uploads/ai-caver-mobile-hero-cave-780.webp" | relURL }} 780w, {{ "/uploads/ai-caver-mobile-hero-cave.webp" | relURL }} 1033w"
+             sizes="100vw" width="780" height="730" alt="" loading="eager" decoding="async" fetchpriority="high">
+    </div>
+    <div class="aicaver-mobile-hero__body">
+        <p class="aicaver-mobile-hero__text">{{ $heroText }}</p>
+        <nav class="aicaver-mobile-hero__socials" aria-label="AI Caver on social media">
+            <a href="https://www.instagram.com/aicavercom/" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@aicaver-blog" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@aicaver" target="_blank" rel="noopener noreferrer" aria-label="AI Caver on TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+        </nav>
+        <a class="aicaver-mobile-hero__cta" href="{{ $subscribeURL }}">{{ $subscribeTitle }}</a>
+    </div>
+</section>
+
+{{/* Desktop-only hero. */}}
+{{- $socialLabel := cond $isUkrainian "Стежте за AI Caver" (cond $isRussian "Следите за AI Caver" "Follow AI Caver") -}}
 {{- $fineprint := cond $isUkrainian "Без спаму. Відписатися можна будь-коли." (cond $isRussian "Без спама. Отписаться можно в любое время." "No spam. Unsubscribe anytime.") -}}
 <section class="aicaver-desktop-hero" aria-labelledby="aicaver-desktop-title">
     <div class="aicaver-desktop-hero__copy">

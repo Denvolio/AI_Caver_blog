@@ -11,7 +11,7 @@
             <meta name="robots" content="index, follow" />
         {{- end }}
         {{- $seoTitle := .Params.seoTitle | default .Title -}}
-        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $seoTitle }} | AI Caver{{ end }}</title>
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Params.titleFull }}{{ . }}{{ else }}{{ $seoTitle }} | AI Caver{{ end }}{{ end }}</title>
 
         {{- partial "head/meta.html" . -}}
         {{- partial "head/link.html" . -}}

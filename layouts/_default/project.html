@@ -1,0 +1,122 @@
+{{- define "content" -}}
+{{- $p := .Params -}}
+{{- $hero := $p.heroStyle | default "light" -}}
+{{- $model := $p.modelStyle | default "hub" -}}
+<article class="page ac-page ac-project ac-project--{{ $hero }}">
+
+    {{- /* Hero */ -}}
+    <div class="ac-project__hero">
+        {{- if eq $hero "dark" -}}
+        <img class="ac-project__cover" src="{{ "/uploads/ai-caver-answers-banner.webp" | relURL }}" alt="" width="1050" height="461" loading="eager" decoding="async">
+        {{- end -}}
+        <div class="ac-project__copy">
+            <p class="ac-pill">{{ $p.eyebrow }}</p>
+            <h1 class="ac-project__title">{{ .Title }}</h1>
+            {{- with $p.subtitle }}<p class="ac-project__subtitle">{{ . }}</p>{{ end }}
+            {{- if eq $hero "light" }}<div class="ac-narrow ac-project__intro">{{ $p.intro | markdownify }}</div>{{ end }}
+        </div>
+        {{- if eq $hero "light" -}}
+        <div class="ac-project__art" aria-hidden="true"><img src="{{ "/uploads/ai-caver-desktop-hero-rappel.webp" | relURL }}" alt="" width="1122" height="1402" loading="eager" decoding="async"></div>
+        {{- end -}}
+    </div>
+    {{- if eq $hero "dark" }}<div class="ac-narrow ac-project__intro ac-project__intro--below">{{ $p.intro | markdownify }}</div>{{ end }}
+
+    {{- /* The question */ -}}
+    {{- with $p.question -}}
+    <section class="ac-sec" id="question">
+        <div class="ac-narrow"><h2 class="ac-h2">{{ .heading }}</h2>{{ .body | markdownify }}</div>
+    </section>
+    {{- end -}}
+
+    {{- /* Editorial model */ -}}
+    {{- with $p.editorialModel -}}
+    <section class="ac-sec" id="model">
+        <h2 class="ac-h2">{{ .heading }}</h2>
+        {{- with .intro }}<p class="ac-lead">{{ . }}</p>{{ end }}
+        {{- if eq $model "pipeline" -}}
+            {{- with .pipeline -}}
+            <ol class="ac-pipe">
+                {{- range . }}<li class="ac-pipe__step{{ if .human }} is-human{{ end }}"><b>{{ .label }}</b><small>{{ .who }}</small></li>{{ end -}}
+            </ol>
+            <p class="ac-legend"><span class="is-human"></span>{{ $.Params.editorialModel.legendHuman }} <span></span>{{ $.Params.editorialModel.legendAI }}</p>
+            {{- end -}}
+            <div class="ac-roles ac-roles--table">
+                {{- range .roles }}<div class="ac-role{{ if .human }} is-human{{ end }}"><b>{{ .name }}</b><div>{{ .text | markdownify }}</div></div>{{ end -}}
+            </div>
+        {{- else -}}
+            {{- $roles := .roles -}}
+            <div class="ac-model">
+                <svg class="ac-hub" viewBox="0 0 460 380" role="img" aria-label="{{ .diagramLabel }}">
+                    {{- $pos := slice (slice 110 62) (slice 350 62) (slice 100 215) (slice 360 215) (slice 230 335) -}}
+                    {{- range $pos }}<line class="ac-hub__edge" x1="230" y1="190" x2="{{ index . 0 }}" y2="{{ index . 1 }}"/>{{ end -}}
+                    {{- $i := 0 -}}
+                    {{- range $roles -}}
+                        {{- if not .human -}}
+                            {{- with index $pos $i -}}
+                            {{- $x := index . 0 }}{{ $y := index . 1 -}}
+                            <g class="ac-hub__node"><rect x="{{ sub $x 85 }}" y="{{ sub $y 22 }}" width="170" height="44" rx="10"/><text x="{{ $x }}" y="{{ add $y 5 }}" text-anchor="middle">{{ index $.Params.editorialModel.short $i }}</text></g>
+                            {{- end -}}
+                            {{- $i = add $i 1 -}}
+                        {{- end -}}
+                    {{- end -}}
+                    <g class="ac-hub__core"><rect x="135" y="160" width="190" height="62" rx="14"/><text x="230" y="186" text-anchor="middle" class="k">{{ .coreKicker }}</text><text x="230" y="207" text-anchor="middle">{{ .coreLabel }}</text></g>
+                </svg>
+                <ul class="ac-roles">
+                    {{- range $roles }}<li class="{{ if .human }}is-human{{ end }}"><b>{{ .name }}</b>{{ .text | markdownify }}</li>{{ end -}}
+                </ul>
+            </div>
+        {{- end -}}
+        {{- with .note }}<p class="ac-note">{{ . }}</p>{{ end }}
+    </section>
+    {{- end -}}
+
+    {{- /* Editable sections */ -}}
+    {{- range $p.sections -}}
+    <section class="ac-sec" id="{{ .id }}">
+        <div class="ac-narrow"><h2 class="ac-h2">{{ .heading }}</h2>{{ with .lead }}{{ . | markdownify }}{{ end }}</div>
+        {{- with .cards -}}
+        <div class="ac-grid2 ac-lessons">{{ range . }}<div class="ac-card ac-card--plain"><p>{{ . }}</p></div>{{ end }}</div>
+        {{- end -}}
+        {{- with .body }}<div class="ac-narrow ac-after">{{ . | markdownify }}</div>{{ end }}
+    </section>
+    {{- end -}}
+
+    {{- /* Changelog: add entries to `updates` in front matter. */ -}}
+    <section class="ac-sec" id="updates">
+        <h2 class="ac-h2">{{ $p.updatesHeading }}</h2>
+        {{- with $p.updates -}}
+        <ol class="ac-log">
+            {{- range sort . "date" "desc" -}}
+            <li>
+                <time datetime="{{ .date }}">{{ .date }}</time>
+                <div>
+                    <b>{{ .changed }}</b>
+                    {{- with .why }}<p>{{ . | markdownify }}</p>{{ end -}}
+                    {{- with .result }}<p>{{ . | markdownify }}</p>{{ end -}}
+                    {{- with .link }}<a class="ac-link" href="{{ . }}">{{ $p.updatesLinkLabel | default "Supporting material" }}</a>{{ end -}}
+                </div>
+            </li>
+            {{- end -}}
+        </ol>
+        {{- else -}}
+        <p class="ac-log-empty"><i class="fas fa-flask" aria-hidden="true"></i> {{ $p.updatesEmpty }}</p>
+        {{- end -}}
+    </section>
+
+    {{- /* Follow */ -}}
+    {{- with $p.follow -}}
+    <section class="ac-sec ac-contact" id="follow">
+        <div class="ac-narrow">
+            <h2 class="ac-h2">{{ .heading }}</h2>
+            {{ .body | markdownify }}
+            <p class="ac-sign"><b>{{ .signName }}</b>{{ .signRole }}</p>
+        </div>
+        <div class="ac-btns">
+            {{- range $i, $l := .links -}}
+            <a class="ac-btn{{ if eq $i 0 }} ac-btn--primary{{ end }}" href="{{ if strings.HasPrefix $l.url "mailto:" }}{{ $l.url }}{{ else }}{{ $l.url | relURL }}{{ end }}">{{ $l.label }}</a>
+            {{- end -}}
+        </div>
+    </section>
+    {{- end -}}
+</article>
+{{- end -}}

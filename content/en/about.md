@@ -1,85 +1,97 @@
 ---
-title: "About"
-description: "AI Caver — a research log about how AI reshapes human life and behavior. By Denys Voroshylov — AI enthusiast, optimist, and marketing automation architect."
+title: "Denys Voroshylov"
+titleFull: "Denys Voroshylov — Founder & Editor of AI Caver"
+description: "Meet Denys Voroshylov, marketing automation strategist and founder of AI Caver, where he is building an experimental AI-assisted newsroom."
+translationKey: "about"
+layout: "about"
+heroStyle: "dark"
+images: ["/uploads/denys-speaking-2.png"]
+photoAlt: "Denys Voroshylov speaking on stage"
+jobTitle: "Marketing Automation Strategist"
+
+eyebrow: "About the author"
+subtitle: "Marketing Automation Strategist · Founder & Editor of AI Caver"
+intro: |
+  For more than 15 years, I've worked at the intersection of marketing, technology, and automation.
+
+  Today, I'm exploring a different question: how much can one person accomplish when AI becomes a team rather than just another tool?
+
+  I'm the founder and editor of AI Caver, an independent publication about how artificial intelligence changes the way we work, make decisions, and live.
+
+  I'm also trying to build an experimental newsroom where I act as editor-in-chief and AI takes on parts of the research, writing, editing, illustration, and publishing process.
+
+  **The experiment is still in progress. That's part of the story.**
+
+background:
+  heading: "From Marketing Automation to AI"
+  body: |
+    My professional background is in marketing strategy, product growth, CRM, and automation.
+
+    I've worked with B2B and B2C technology businesses, including product marketing at Gameloft and marketing leadership at Devart.
+
+    Over the years, I've helped build customer acquisition processes, marketing systems, and workflows that connect people, data, and software.
+
+    That experience shaped how I think about AI.
+
+    I'm interested in what happens after the impressive demonstration: when you try to make an AI tool part of a real working process, keep it reliable, and understand whether it actually saves time or creates new problems.
+
+    It's the perspective I bring to AI Caver.
+  facts:
+    - "15+ Years in Marketing"
+    - "Marketing Automation & CRM"
+    - "Founder of AI Caver"
+    - "Based in Poland"
+
+building:
+  heading: "What I'm Building"
+  intro: "My own projects are where I test ideas rather than just write about them."
+  projects:
+    - title: "AI Caver — Building an AI Newsroom"
+      text: "I'm experimenting with a newsroom where one human editor works with AI researchers, writers, editors, illustrators, and publishing tools. Some workflows are operational. Others are being rebuilt or tested. I'm documenting what works, what fails, and how the role of a human editor changes."
+      status: "Ongoing experiment"
+      cta: "Explore the experiment"
+      url: "/projects/building-an-ai-newsroom/"
+    - title: "Over The Noise — AI-Assisted Storytelling"
+      text: "A separate project about extraordinary human stories. I'm experimenting with AI-supported research, writing, and visual reconstruction while keeping editorial judgment human."
+      status: "Independent project"
+      cta: "Explore Over The Noise"
+      url: "https://t.me/ovrnoise"
+
+writing:
+  heading: "What I Write About"
+  body: |
+    AI Caver isn't a model leaderboard or a collection of product announcements.
+
+    I'm interested in what artificial intelligence changes for actual people.
+
+    How does AI affect employment and the economics of work? What happens when software begins making decisions? Does automation make small businesses more capable, or simply move risk onto fewer people?
+
+    And how do we tell the difference between something that looks impressive in a demonstration and something that genuinely works?
+  pull: "Those questions drive my writing."
+
+selected:
+  heading: "Selected Writing"
+  intro: "A few essays that reflect the questions I'm exploring."
+  allLabel: "Read all articles"
+  articles:
+    - page: "/posts/ai-agents-workforce-economics"
+      title: "The Digital Employee Is Already at Work"
+      description: "The economics of AI agents, digital labor, and the people who supervise machines."
+    - page: "/posts/ai-solopreneur-era"
+      title: "One Person Instead of a Company"
+      description: "Can AI make solo entrepreneurship more accessible without making it more precarious?"
+    - page: "/posts/ai-trader-right-71-percent-still-lost-money"
+      title: "The AI Trader Was Right 71% of the Time. It Still Lost Money"
+      description: "What AI trading experiments reveal about prediction, risk, and real-world results."
+
+contact:
+  heading: "Get in Touch"
+  body: |
+    Have a story about AI in the real world, an interesting dataset, or an experiment worth investigating?
+
+    I'd be glad to hear about it.
+  email: "author@aicaver.com"
+  linkedin: "https://www.linkedin.com/in/denys-voroshylov-a9722827/"
+  signName: "Denys Voroshylov"
+  signRole: "Founder & Editor, AI Caver"
 ---
-
-<style>
-  /* Общий контейнер: две колонки на десктопе */
-  .about-row{
-    display:flex; gap:24px; align-items:flex-start;
-    max-width:1000px; margin:0 auto 2rem;
-  }
-  /* Фото — ещё компактнее */
-  .about-row img{
-    width:360px;            /* было 420 */
-    max-width:42%;
-    height:auto; border-radius:12px; display:block;
-    flex:0 0 360px;
-  }
-  .about-row .col{
-    flex:1 1 0; min-width:0;
-    overflow-wrap:anywhere; word-break:break-word; /* чтобы длинные токены не ломали вёрстку */
-  }
-  /* Второй ряд — зеркально */
-  .about-row.reverse{ flex-direction:row-reverse; }
-
-  /* Мобильная адаптация: ОБА ряда становятся колонкой */
-  @media (max-width: 900px){
-    .about-row, .about-row.reverse{ flex-direction:column; }
-    .about-row img{ width:100%; max-width:100%; flex:0 0 auto; }
-    .about-row .col{ width:100%; }
-  }
-</style>
-
-
-<div class="about-row">
-  <img src="/uploads/denys-speaking-2.png" alt="Denys Voroshylov speaking" loading="lazy">
-  <div class="col">
-
-  <h2>Hi, I’m Denys — AI enthusiast & optimist</h2>
-
-  <p><strong>AI Caver</strong> is my research playground. I don’t track model leaderboards — I observe <strong>how AI changes people</strong>: daily routines, decisions, incentives, work, care, and play. This site is a <strong>field notebook</strong>: experiments, failures with lessons, small tools that stick, and essays about behavior shifts under the pressure of automation.</p>
-
-  <h3>What you’ll find here</h3>
-  <ul>
-    <li><strong>Research.</strong> I continuously collect data about AI adoption and practices, and analyze how work models and human behavior change.</li>
-    <li><strong>AI-Diary.</strong> A running log of how AI reshapes <em>my own life</em> — strong enough to be worth documenting.</li>
-    <li><strong>Field notes</strong> — practical write-ups from real use (what worked, what didn’t, why).</li>
-    <li><strong>Experiments</strong> — tiny projects to test assumptions.</li>
-    <li><strong>Playbooks</strong> — repeatable workflows for busy humans.</li>
-    <li><strong>Essays</strong> — how AI nudges individual choices and collective behavior.</li>
-  </ul>
-
-  <h3>Principles</h3>
-  <ul>
-    <li><strong>Optimism with guardrails.</strong> Believe in progress, measure risks.</li>
-    <li><strong>Hands-on over hype.</strong> Tools that ship beat slides that shine.</li>
-    <li><strong>Clarity and agency.</strong> Humans stay in control.</li>
-    <li><strong>Privacy by default.</strong> Minimal data, local when possible.</li>
-    <li><strong>Document the path.</strong> Share context, not just results.</li>
-  </ul>
-
-  </div>
-</div>
-
-<div class="about-row reverse">
-  <img src="/uploads/denys-speaking-1.png" alt="Denys Voroshylov portrait" loading="lazy">
-  <div class="col">
-
-  <h3>Me, professionally</h3>
-  <p>Marketing Automation & Growth Specialist with <strong>15+ years</strong> in B2B/B2C. I build multi-channel automation that cuts manual work and improves conversion efficiency.</p>
-
-  <ul>
-    <li><strong>Stacks & skills:</strong> Go High Level, ActiveCampaign, Brevo, Salesforce/Zoho, Make/Zapier, API/RPA, <strong>Python</strong> for data pipelines, SQL/Looker/BigQuery, webinar & leadgen systems.</li>
-    <li><strong>Systems I build:</strong> webinars → CRM → nurturing → analytics; trial-to-paid tracking; role-based comms; dashboards for real-time funnels.</li>
-    <li><strong>Recent roles:</strong> Growth & Marketing Automation Lead at <strong>WhereScape</strong>; previously Head of Marketing at <strong>Devart</strong>; Product Marketing at <strong>Gameloft</strong>; strategy roles in agencies & product teams.</li>
-    <li><strong>Trainer & speaker:</strong> 20+ conference talks, ~10 training programs on marketing automation and practical AI for teams.</li>
-  </ul>
-
-  <p>Based in <strong>Gdańsk, Poland</strong>. Languages: <strong>English (Advanced)</strong>, Ukrainian/Russian (native), Polish (basic).</p>
-
-  <h3>Get in touch</h3>
-  <p>Got a story, dataset, or failure to dissect? Email <strong>author@aicaver.com</strong>. If a post helped you — share it. That’s the best fuel for this project.</p>
-
-  </div>
-</div>

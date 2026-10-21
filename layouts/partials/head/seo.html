@@ -15,6 +15,50 @@
         {{- $data = merge $data (dict "image" (. | absURL)) -}}
     {{- end -}}
     <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if eq .Layout "about" -}}
+    {{- /* Author profile: one stable Person entity shared by all translations. */ -}}
+    {{- $personID := "https://www.aicaver.com/about/#person" -}}
+    {{- $person := dict
+        "@type" "Person"
+        "@id" $personID
+        "name" "Denys Voroshylov"
+        "alternateName" "Денис Ворошилов"
+        "url" "https://www.aicaver.com/about/"
+        "image" ("/uploads/denys-speaking-2.png" | absURL)
+        "jobTitle" .Params.jobTitle
+        "description" .Description
+        "sameAs" (slice "https://www.linkedin.com/in/denys-voroshylov-a9722827/")
+    -}}
+    {{- $data := dict
+        "@context" "https://schema.org"
+        "@type" "ProfilePage"
+        "@id" .Permalink
+        "url" .Permalink
+        "name" (.Params.titleFull | default .Title)
+        "description" .Description
+        "inLanguage" .Language.Lang
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+        "isPartOf" (dict "@type" "WebSite" "name" "AI Caver" "url" ("/" | absURL))
+        "mainEntity" $person
+    -}}
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if eq .Layout "project" -}}
+    {{- $data := dict
+        "@context" "https://schema.org"
+        "@type" "WebPage"
+        "@id" .Permalink
+        "url" .Permalink
+        "name" .Title
+        "headline" .Title
+        "description" .Description
+        "inLanguage" .Language.Lang
+        "datePublished" (.Date.Format "2006-01-02")
+        "dateModified" (.Lastmod.Format "2006-01-02")
+        "author" (dict "@type" "Person" "@id" "https://www.aicaver.com/about/#person" "name" "Denys Voroshylov" "url" "https://www.aicaver.com/about/")
+        "isPartOf" (dict "@type" "WebSite" "name" "AI Caver" "url" ("/" | absURL))
+    -}}
+    {{- with .Params.images }}{{ $data = merge $data (dict "primaryImageOfPage" (index . 0 | absURL)) }}{{ end -}}
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
 {{- else if .IsPage -}}
     {{- $authorName := .Params.author | default .Site.Params.Author.name | default "Denys Voroshylov" -}}
     {{- $author := dict "@type" "Person" "name" $authorName -}}

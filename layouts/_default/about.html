@@ -1,0 +1,104 @@
+{{- define "content" -}}
+{{- $p := .Params -}}
+{{- $style := $p.heroStyle | default "dark" -}}
+<article class="page ac-page ac-about ac-about--{{ $style }}">
+
+    {{- /* Hero */ -}}
+    <div class="ac-about__hero">
+        <div class="ac-about__copy">
+            {{- with $p.eyebrow }}<p class="ac-eyebrow">{{ . }}</p>{{ end }}
+            <h1 class="ac-about__name">{{ .Title }}</h1>
+            {{- with $p.subtitle }}<p class="ac-about__subtitle">{{ . }}</p>{{ end }}
+            <div class="ac-about__intro">{{ $p.intro | markdownify }}</div>
+        </div>
+        <div class="ac-about__photo">
+            <img src="{{ "/uploads/denys-voroshylov-portrait-848.webp" | relURL }}"
+                 srcset="{{ "/uploads/denys-voroshylov-portrait-600.webp" | relURL }} 600w, {{ "/uploads/denys-voroshylov-portrait-848.webp" | relURL }} 848w"
+                 sizes="(max-width: 800px) 100vw, 420px" width="848" height="1264"
+                 alt="{{ $p.photoAlt }}" loading="eager" decoding="async" fetchpriority="high">
+        </div>
+    </div>
+
+    {{- /* Professional background */ -}}
+    {{- with $p.background -}}
+    <section class="ac-sec ac-about__bg" aria-labelledby="ac-bg">
+        <div class="ac-narrow">
+            <h2 id="ac-bg" class="ac-h2">{{ .heading }}</h2>
+            {{ .body | markdownify }}
+        </div>
+        {{- with .facts -}}
+        <ul class="ac-facts">
+            {{- range . }}<li>{{ . }}</li>{{ end -}}
+        </ul>
+        {{- end -}}
+    </section>
+    {{- end -}}
+
+    {{- /* Projects */ -}}
+    {{- with $p.building -}}
+    <section class="ac-sec" aria-labelledby="ac-build">
+        <h2 id="ac-build" class="ac-h2">{{ .heading }}</h2>
+        {{- with .intro }}<p class="ac-lead">{{ . }}</p>{{ end }}
+        <div class="ac-grid2">
+            {{- range $i, $pr := .projects -}}
+            {{- $external := strings.HasPrefix $pr.url "http" -}}
+            {{- $url := cond $external $pr.url ($pr.url | relURL) -}}
+            <a class="ac-card{{ if eq $i 0 }} ac-card--feature{{ end }}" href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}{{ with $pr.hreflang }} hreflang="{{ . }}"{{ end }}>
+                <span class="ac-status">{{ $pr.status }}</span>
+                <h3>{{ $pr.title }}</h3>
+                <p>{{ $pr.text }}</p>
+                <span class="ac-link">{{ $pr.cta }}{{ with $pr.note }} <span class="ac-lang">{{ . }}</span>{{ end }}</span>
+            </a>
+            {{- end -}}
+        </div>
+    </section>
+    {{- end -}}
+
+    {{- /* What I write about */ -}}
+    {{- with $p.writing -}}
+    <section class="ac-sec" aria-labelledby="ac-write">
+        <div class="ac-narrow">
+            <h2 id="ac-write" class="ac-h2">{{ .heading }}</h2>
+            {{ .body | markdownify }}
+            {{- with .pull }}<p class="ac-pull">{{ . }}</p>{{ end }}
+        </div>
+    </section>
+    {{- end -}}
+
+    {{- /* Selected writing */ -}}
+    {{- with $p.selected -}}
+    <section class="ac-sec" aria-labelledby="ac-sel">
+        <h2 id="ac-sel" class="ac-h2">{{ .heading }}</h2>
+        {{- with .intro }}<p class="ac-lead">{{ . }}</p>{{ end }}
+        <div class="ac-grid3">
+            {{- range .articles -}}
+            {{- $post := site.GetPage .page -}}
+            {{- if not $post }}{{ errorf "about: selected article %q not found for language %s" .page site.Language.Lang }}{{ end -}}
+            <a class="ac-article" href="{{ $post.RelPermalink }}">
+                {{- with $post.Params.featuredImage -}}
+                <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async" width="1600" height="900">
+                {{- end -}}
+                <div><h3>{{ .title }}</h3><p>{{ .description }}</p></div>
+            </a>
+            {{- end -}}
+        </div>
+        {{- with site.GetPage "/posts" }}<a class="ac-link ac-all" href="{{ .RelPermalink }}">{{ $p.selected.allLabel }}</a>{{ end }}
+    </section>
+    {{- end -}}
+
+    {{- /* Contact */ -}}
+    {{- with $p.contact -}}
+    <section class="ac-sec ac-contact" aria-labelledby="ac-contact">
+        <div class="ac-narrow">
+            <h2 id="ac-contact" class="ac-h2">{{ .heading }}</h2>
+            {{ .body | markdownify }}
+            <p class="ac-sign"><b>{{ .signName }}</b>{{ .signRole }}</p>
+        </div>
+        <div class="ac-btns">
+            <a class="ac-btn ac-btn--primary" href="mailto:{{ .email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ .email }}</a>
+            <a class="ac-btn" href="{{ .linkedin }}" target="_blank" rel="noopener me"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </div>
+    </section>
+    {{- end -}}
+</article>
+{{- end -}}

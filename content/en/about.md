@@ -5,8 +5,9 @@ description: "Meet Denys Voroshylov, marketing automation strategist and founder
 translationKey: "about"
 layout: "about"
 heroStyle: "dark"
-images: ["/uploads/denys-speaking-2.png"]
-photoAlt: "Denys Voroshylov speaking on stage"
+images: ["/uploads/denys-voroshylov-office.jpg"]
+photoAlt: "Denys Voroshylov at his desk with a laptop"
+stagePhotoAlt: "Denys Voroshylov speaking at a conference"
 jobTitle: "Marketing Automation Strategist"
 
 eyebrow: "About the author"

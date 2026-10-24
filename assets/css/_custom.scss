@@ -559,7 +559,15 @@ a.ac-card:hover, a.ac-card:focus-visible { border-color: var(--ac-accent2); tran
   time { color: var(--ac-accent); font-family: monospace; font-weight: 700; } }
 .ac-log-empty { background: var(--ac-soft); border: 1px dashed var(--ac-line); border-radius: 1rem; font-weight: 600; padding: 1.3rem; }
 
+.ac-about__side { display: grid; gap: 1rem; }
+.ac-photo { margin: 0;
+  img { aspect-ratio: 4 / 5; border-radius: 1rem; display: block; height: auto !important; object-fit: cover; object-position: 50% 20%; width: 100%; } }
+.ac-about__write { align-items: center; display: grid; gap: 3rem; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.ac-about--dark .ac-about__photo img { object-position: 50% 35%; }
+
 @media only screen and (max-width: 800px) {
+  .ac-about__write { grid-template-columns: 1fr; gap: 1.4rem; }
+  .ac-about__side .ac-photo, .ac-about__write .ac-photo { max-width: 360px; }
   .ac-page { width: 100%; padding: 0 1rem 2rem; }
   .ac-grid2, .ac-grid3, .ac-about__bg, .ac-model { grid-template-columns: 1fr; }
   .ac-sec { padding: 2.2rem 0; }

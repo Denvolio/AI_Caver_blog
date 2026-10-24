@@ -12,9 +12,9 @@
             <div class="ac-about__intro">{{ $p.intro | markdownify }}</div>
         </div>
         <div class="ac-about__photo">
-            <img src="{{ "/uploads/denys-voroshylov-portrait-848.webp" | relURL }}"
-                 srcset="{{ "/uploads/denys-voroshylov-portrait-600.webp" | relURL }} 600w, {{ "/uploads/denys-voroshylov-portrait-848.webp" | relURL }} 848w"
-                 sizes="(max-width: 800px) 100vw, 420px" width="848" height="1264"
+            <img src="{{ "/uploads/denys-voroshylov-office-1000.webp" | relURL }}"
+                 srcset="{{ "/uploads/denys-voroshylov-office-640.webp" | relURL }} 640w, {{ "/uploads/denys-voroshylov-office-1000.webp" | relURL }} 1000w"
+                 sizes="(max-width: 800px) 100vw, 440px" width="1000" height="1000"
                  alt="{{ $p.photoAlt }}" loading="eager" decoding="async" fetchpriority="high">
         </div>
     </div>
@@ -26,11 +26,14 @@
             <h2 id="ac-bg" class="ac-h2">{{ .heading }}</h2>
             {{ .body | markdownify }}
         </div>
-        {{- with .facts -}}
-        <ul class="ac-facts">
-            {{- range . }}<li>{{ . }}</li>{{ end -}}
-        </ul>
-        {{- end -}}
+        <div class="ac-about__side">
+            <figure class="ac-photo"><img src="{{ "/uploads/denys-voroshylov-portrait-600.webp" | relURL }}" srcset="{{ "/uploads/denys-voroshylov-portrait-600.webp" | relURL }} 600w, {{ "/uploads/denys-voroshylov-portrait-848.webp" | relURL }} 848w" sizes="(max-width: 800px) 100vw, 380px" width="600" height="894" alt="{{ $.Params.stagePhotoAlt }}" loading="lazy" decoding="async"></figure>
+            {{- with .facts -}}
+            <ul class="ac-facts">
+                {{- range . }}<li>{{ . }}</li>{{ end -}}
+            </ul>
+            {{- end -}}
+        </div>
     </section>
     {{- end -}}
 
@@ -56,12 +59,13 @@
 
     {{- /* What I write about */ -}}
     {{- with $p.writing -}}
-    <section class="ac-sec" aria-labelledby="ac-write">
+    <section class="ac-sec ac-about__write" aria-labelledby="ac-write">
         <div class="ac-narrow">
             <h2 id="ac-write" class="ac-h2">{{ .heading }}</h2>
             {{ .body | markdownify }}
             {{- with .pull }}<p class="ac-pull">{{ . }}</p>{{ end }}
         </div>
+        <figure class="ac-photo"><img src="{{ "/uploads/denys-voroshylov-stage-2-600.webp" | relURL }}" width="600" height="894" alt="{{ $.Params.stagePhotoAlt }}" loading="lazy" decoding="async"></figure>
     </section>
     {{- end -}}
 

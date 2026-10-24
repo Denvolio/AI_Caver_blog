@@ -5,8 +5,9 @@ description: "Денис Ворошилов — стратег по автома
 translationKey: "about"
 layout: "about"
 heroStyle: "dark"
-images: ["/uploads/denys-speaking-2.png"]
-photoAlt: "Денис Ворошилов выступает на сцене"
+images: ["/uploads/denys-voroshylov-office.jpg"]
+photoAlt: "Денис Ворошилов за рабочим столом с ноутбуком"
+stagePhotoAlt: "Денис Ворошилов выступает на конференции"
 jobTitle: "Стратег по автоматизации маркетинга"
 
 eyebrow: "Об авторе"

@@ -4,7 +4,7 @@ titleFull: "Денис Ворошилов — засновник і редакт
 description: "Денис Ворошилов — стратег з автоматизації маркетингу та засновник AI Caver. Досліджує можливості експериментальної редакції за участю ШІ."
 translationKey: "about"
 layout: "about"
-heroStyle: "dark"
+heroStyle: "light"
 images: ["/uploads/denys-voroshylov-office.jpg"]
 photoAlt: "Денис Ворошилов за робочим столом із ноутбуком"
 stagePhotoAlt: "Денис Ворошилов виступає на конференції"

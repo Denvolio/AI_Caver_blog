@@ -6,8 +6,8 @@ slug: "building-an-ai-newsroom"
 date: 2026-10-21
 lastmod: 2026-10-21
 layout: "project"
-heroStyle: "light"
-modelStyle: "hub"
+heroStyle: "dark"
+modelStyle: "pipeline"
 images: ["/uploads/ai-caver-desktop-hero-rappel.webp"]
 
 eyebrow: "Project · Ongoing experiment"

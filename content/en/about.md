@@ -4,7 +4,7 @@ titleFull: "Denys Voroshylov — Founder & Editor of AI Caver"
 description: "Meet Denys Voroshylov, marketing automation strategist and founder of AI Caver, where he is building an experimental AI-assisted newsroom."
 translationKey: "about"
 layout: "about"
-heroStyle: "dark"
+heroStyle: "light"
 images: ["/uploads/denys-voroshylov-office.jpg"]
 photoAlt: "Denys Voroshylov at his desk with a laptop"
 stagePhotoAlt: "Denys Voroshylov speaking at a conference"
